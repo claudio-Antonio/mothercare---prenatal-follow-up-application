@@ -1,0 +1,23 @@
+server:
+  port: ${SERVER_PORT:8083}
+
+spring:
+  application:
+    name: scheduling-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5435/mothercare_scheduling}
+    username: ${SPRING_DATASOURCE_USERNAME:mothercare}
+    password: ${SPRING_DATASOURCE_PASSWORD:mothercare}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+mothercare:
+  jwt:
+    secret: ${MOTHERCARE_JWT_SECRET}
+  clinical-service:
+    base-url: ${CLINICAL_SERVICE_URL}

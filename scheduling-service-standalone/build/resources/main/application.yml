@@ -1,0 +1,23 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: scheduling-service
+  datasource:
+    url: jdbc:postgresql://localhost:5435/mothercare_scheduling
+    username: mothercare
+    password: mothercare
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+mothercare:
+  jwt:
+    secret: ${MOTHERCARE_JWT_SECRET:troque-esta-chave-em-producao-mothercare-2026-min-32-bytes}
+  clinical-service:
+    base-url: ${CLINICAL_SERVICE_URL:http://localhost:8082}

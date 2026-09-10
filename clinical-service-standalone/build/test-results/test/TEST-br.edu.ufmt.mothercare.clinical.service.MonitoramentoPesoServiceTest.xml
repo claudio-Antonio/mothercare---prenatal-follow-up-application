@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.MonitoramentoPesoServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:02:19.869Z" hostname="claudio-nery" time="0.089">
+  <properties/>
+  <testcase name="nao deve disparar alerta quando ganho esta dentro do limite()" classname="br.edu.ufmt.mothercare.clinical.service.MonitoramentoPesoServiceTest" time="0.018"/>
+  <testcase name="deve disparar alerta quando ganho ultrapassa 1,5kg em 30 dias no 2o trimestre()" classname="br.edu.ufmt.mothercare.clinical.service.MonitoramentoPesoServiceTest" time="0.002"/>
+  <testcase name="nao deve avaliar ganho com apenas um registro()" classname="br.edu.ufmt.mothercare.clinical.service.MonitoramentoPesoServiceTest" time="0.003"/>
+  <testcase name="nao deve disparar alerta fora do 2o trimestre mesmo com ganho alto()" classname="br.edu.ufmt.mothercare.clinical.service.MonitoramentoPesoServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

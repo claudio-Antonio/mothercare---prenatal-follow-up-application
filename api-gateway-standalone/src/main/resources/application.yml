@@ -1,0 +1,28 @@
+server:
+  port: ${SERVER_PORT}
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      httpclient:
+        connect-timeout: 2000
+        response-timeout: 5s
+
+# Requisito RNF03 do TCC: triagem de risco deve responder em < 1,5s.
+# O timeout de borda do Gateway é definido com folga (5s) para não
+# mascarar lentidão real dos serviços internos durante os testes.
+
+mothercare:
+  jwt:
+    secret: ${MOTHERCARE_JWT_SECRET}
+  routes:
+    auth-service: ${MOTHERCARE_ROUTE_AUTH:http}
+    clinical-service: ${MOTHERCARE_ROUTE_CLINICAL}
+    scheduling-service: ${MOTHERCARE_ROUTE_SCHEDULING}
+# Fora do Docker, os defaults apontam para localhost. No Compose, o .env
+# preenche MOTHERCARE_ROUTE_* com os hostnames da rede interna.

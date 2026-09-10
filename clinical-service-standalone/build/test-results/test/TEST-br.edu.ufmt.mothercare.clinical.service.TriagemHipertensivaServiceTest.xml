@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:02:20.169Z" hostname="claudio-nery" time="0.134">
+  <properties/>
+  <testcase name="deve bloquear quando apenas a sistolica esta alterada()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceTest" time="0.034"/>
+  <testcase name="deve bloquear agendamento quando sistolica atinge exatamente o limiar 140()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceTest" time="0.007"/>
+  <testcase name="nao deve bloquear com valores logo abaixo dos limiares (139-89)()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceTest" time="0.003"/>
+  <testcase name="deve persistir o registro de pressao independente do resultado()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceTest" time="0.006"/>
+  <testcase name="deve liberar agendamento com pressao normal()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceTest" time="0.005"/>
+  <testcase name="deve bloquear agendamento quando diastolica atinge exatamente o limiar 90()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

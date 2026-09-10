@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.gateway.security.JwtValidatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-03T11:47:16.615Z" hostname="claudio-nery" time="0.571">
+  <properties/>
+  <testcase name="deve rejeitar string que nao e um JWT()" classname="br.edu.ufmt.mothercare.gateway.security.JwtValidatorTest" time="0.208"/>
+  <testcase name="extractSubject deve retornar null para token invalido()" classname="br.edu.ufmt.mothercare.gateway.security.JwtValidatorTest" time="0.005"/>
+  <testcase name="deve extrair o subject do token valido()" classname="br.edu.ufmt.mothercare.gateway.security.JwtValidatorTest" time="0.307"/>
+  <testcase name="deve rejeitar token expirado()" classname="br.edu.ufmt.mothercare.gateway.security.JwtValidatorTest" time="0.009"/>
+  <testcase name="deve rejeitar token assinado com segredo diferente()" classname="br.edu.ufmt.mothercare.gateway.security.JwtValidatorTest" time="0.008"/>
+  <testcase name="deve validar token assinado corretamente e nao expirado()" classname="br.edu.ufmt.mothercare.gateway.security.JwtValidatorTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

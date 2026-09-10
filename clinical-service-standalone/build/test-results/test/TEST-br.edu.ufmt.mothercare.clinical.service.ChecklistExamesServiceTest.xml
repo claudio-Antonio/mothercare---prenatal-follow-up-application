@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.ChecklistExamesServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:02:18.279Z" hostname="claudio-nery" time="1.588">
+  <properties/>
+  <testcase name="deve retornar itens do 2o trimestre para gestante com 20 semanas()" classname="br.edu.ufmt.mothercare.clinical.service.ChecklistExamesServiceTest" time="0.464"/>
+  <testcase name="itens sem tipo rastreado devem ser NAO_RASTREADO()" classname="br.edu.ufmt.mothercare.clinical.service.ChecklistExamesServiceTest" time="0.002"/>
+  <testcase name="deve retornar itens do 1o trimestre e marcar hemoglobina como REALIZADO se ja registrada()" classname="br.edu.ufmt.mothercare.clinical.service.ChecklistExamesServiceTest" time="0.005"/>
+  <testcase name="deve marcar glicemia como PENDENTE quando ainda nao registrada()" classname="br.edu.ufmt.mothercare.clinical.service.ChecklistExamesServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/claudio/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:04:48.312Z" hostname="claudio-nery" time="3.48">
+  <properties/>
+  <testcase name="deve aplicar periodicidade SEMANAL a partir da 28a semana (RN04)()" classname="br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest" time="1.134"/>
+  <testcase name="deve bloquear agendamento quando ultimo check-in de PA indicou risco (RF05)()" classname="br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest" time="0.038"/>
+  <testcase name="deve manter periodicidade MENSAL na 27a semana (limite inferior)()" classname="br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest" time="0.024"/>
+  <testcase name="deve permitir agendamento quando ultimo check-in de PA esta normal()" classname="br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest" time="0.022"/>
+  <testcase name="deve rejeitar agendamento que viola o intervalo minimo semanal()" classname="br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest" time="0.014"/>
+  <testcase name="deve aplicar periodicidade MENSAL antes da 28a semana()" classname="br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/claudio/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

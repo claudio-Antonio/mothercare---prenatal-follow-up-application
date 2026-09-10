@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceUltimoStatusTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:02:20.305Z" hostname="claudio-nery" time="0.021">
+  <properties/>
+  <testcase name="deve retornar o nivel de risco do check-in mais recente()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceUltimoStatusTest" time="0.017"/>
+  <testcase name="deve retornar NORMAL quando nunca houve check-in()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemHipertensivaServiceUltimoStatusTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

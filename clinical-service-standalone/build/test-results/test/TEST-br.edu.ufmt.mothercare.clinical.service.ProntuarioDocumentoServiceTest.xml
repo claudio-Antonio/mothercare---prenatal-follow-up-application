@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.ProntuarioDocumentoServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:02:19.960Z" hostname="claudio-nery" time="0.204">
+  <properties/>
+  <testcase name="deve lancar excecao ao buscar documento inexistente()" classname="br.edu.ufmt.mothercare.clinical.service.ProntuarioDocumentoServiceTest" time="0.057"/>
+  <testcase name="deve aceitar upload de PDF()" classname="br.edu.ufmt.mothercare.clinical.service.ProntuarioDocumentoServiceTest" time="0.062"/>
+  <testcase name="deve listar documentos da gestante em ordem cronologica reversa()" classname="br.edu.ufmt.mothercare.clinical.service.ProntuarioDocumentoServiceTest" time="0.02"/>
+  <testcase name="deve aceitar upload de imagem JPEG()" classname="br.edu.ufmt.mothercare.clinical.service.ProntuarioDocumentoServiceTest" time="0.002"/>
+  <testcase name="deve rejeitar formato nao suportado (UC07 - A1)()" classname="br.edu.ufmt.mothercare.clinical.service.ProntuarioDocumentoServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.TriagemLaboratorialServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:02:20.327Z" hostname="claudio-nery" time="0.036">
+  <properties/>
+  <testcase name="deve disparar alerta de diabetes para glicemia igual a 92 (limiar inclusivo)()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemLaboratorialServiceTest" time="0.001"/>
+  <testcase name="nao deve disparar alerta de anemia para Hb igual a 11()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemLaboratorialServiceTest" time="0.001"/>
+  <testcase name="deve retornar alertaDisparado true no response quando Hb baixa()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemLaboratorialServiceTest" time="0.027"/>
+  <testcase name="deve disparar alerta de anemia para Hb abaixo de 11()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemLaboratorialServiceTest" time="0.001"/>
+  <testcase name="nao deve disparar alerta de diabetes para glicemia de 91_9()" classname="br.edu.ufmt.mothercare.clinical.service.TriagemLaboratorialServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

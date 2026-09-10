@@ -1,0 +1,137 @@
+# Orquestra o ecossistema Mother Care completo: os 3 bancos isolados
+# (Database per Service, Seção 4.2.2 do TCC) + os 4 microsserviços,
+# cada um construído a partir do seu próprio Dockerfile.
+#
+# Variáveis vêm do .env na raiz (interpolação ${CHAVE}).
+#
+# Uso:
+#   docker compose up --build          # sobe tudo
+#   docker compose logs -f api-gateway # acompanha um serviço específico
+#   docker compose down -v             # derruba tudo e apaga os volumes
+
+services:
+
+  # ---------- Bancos (um por serviço) ----------
+
+  db-auth:
+    image: postgres:16-alpine
+    container_name: mothercare-db-auth
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB_AUTH}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${DB_AUTH_HOST_PORT}:5432"
+    volumes:
+      - db_auth_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB_AUTH}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  db-clinical:
+    image: postgres:16-alpine
+    container_name: mothercare-db-clinical
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB_CLINICAL}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${DB_CLINICAL_HOST_PORT}:5432"
+    volumes:
+      - db_clinical_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB_CLINICAL}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  db-scheduling:
+    image: postgres:16-alpine
+    container_name: mothercare-db-scheduling
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB_SCHEDULING}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${DB_SCHEDULING_HOST_PORT}:5432"
+    volumes:
+      - db_scheduling_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB_SCHEDULING}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # ---------- Microsserviços ----------
+
+  auth-service:
+    build: ./auth-service-standalone
+    container_name: mothercare-auth-service
+    environment:
+      SERVER_PORT: ${AUTH_SERVICE_PORT}
+      SPRING_DATASOURCE_URL: ${AUTH_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      MOTHERCARE_JWT_SECRET: ${MOTHERCARE_JWT_SECRET}
+      MOTHERCARE_JWT_EXPIRACAO_MINUTOS: ${MOTHERCARE_JWT_EXPIRACAO_MINUTOS}
+    ports:
+      - "${AUTH_SERVICE_PORT}:${AUTH_SERVICE_PORT}"
+    depends_on:
+      db-auth:
+        condition: service_healthy
+
+  clinical-service:
+    build: ./clinical-service-standalone
+    container_name: mothercare-clinical-service
+    environment:
+      SERVER_PORT: ${CLINICAL_SERVICE_PORT}
+      SPRING_DATASOURCE_URL: ${CLINICAL_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      MOTHERCARE_JWT_SECRET: ${MOTHERCARE_JWT_SECRET}
+    ports:
+      - "${CLINICAL_SERVICE_PORT}:${CLINICAL_SERVICE_PORT}"
+    depends_on:
+      db-clinical:
+        condition: service_healthy
+
+  scheduling-service:
+    build: ./scheduling-service-standalone
+    container_name: mothercare-scheduling-service
+    environment:
+      SERVER_PORT: ${SCHEDULING_SERVICE_PORT}
+      SPRING_DATASOURCE_URL: ${SCHEDULING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
+      MOTHERCARE_JWT_SECRET: ${MOTHERCARE_JWT_SECRET}
+      CLINICAL_SERVICE_URL: ${CLINICAL_SERVICE_URL}
+    ports:
+      - "${SCHEDULING_SERVICE_PORT}:${SCHEDULING_SERVICE_PORT}"
+    depends_on:
+      db-scheduling:
+        condition: service_healthy
+      clinical-service:
+        condition: service_started
+
+  api-gateway:
+    build: ./api-gateway-standalone
+    container_name: mothercare-api-gateway
+    environment:
+      SERVER_PORT: ${API_GATEWAY_PORT}
+      MOTHERCARE_JWT_SECRET: ${MOTHERCARE_JWT_SECRET}
+      MOTHERCARE_ROUTE_AUTH: ${MOTHERCARE_ROUTE_AUTH}
+      MOTHERCARE_ROUTE_CLINICAL: ${MOTHERCARE_ROUTE_CLINICAL}
+      MOTHERCARE_ROUTE_SCHEDULING: ${MOTHERCARE_ROUTE_SCHEDULING}
+    ports:
+      - "${API_GATEWAY_PORT}:${API_GATEWAY_PORT}"
+    depends_on:
+      - auth-service
+      - clinical-service
+      - scheduling-service
+
+volumes:
+  db_auth_data:
+  db_clinical_data:
+  db_scheduling_data:

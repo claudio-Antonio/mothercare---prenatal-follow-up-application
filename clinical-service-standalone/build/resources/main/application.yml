@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: clinical-service
+  datasource:
+    url: jdbc:postgresql://localhost:5434/mothercare_clinical
+    username: mothercare
+    password: mothercare
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      # Laudos em PDF/imagem tendem a ser pequenos (poucos MB); 10MB dá
+      # folga sem deixar o bytea do Postgres inchar demais (ver trade-off
+      # documentado em DocumentoClinico.kt).
+
+mothercare:
+  jwt:
+    secret: ${MOTHERCARE_JWT_SECRET:troque-esta-chave-em-producao-mothercare-2026-min-32-bytes}
