@@ -1,0 +1,336 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [androidx.navigation:navigation-common:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/a3b7fee0309a9995bb3ca44eaa3039fd/transformed/navigation-common-2.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/569ff2539c3634477185f35ba2481065/transformed/navigation-runtime-2.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/a7858f9f2c012efdc17b783afcd2a555/transformed/navigation-common-ktx-2.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/33822f03e81621f02d50019d3a16a65e/transformed/navigation-runtime-ktx-2.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/3a8f8c1e4985fcdce6c9e510a9f3aa4b/transformed/navigation-compose-2.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/fe56763aedfcee491da0af72b3b3102c/transformed/activity-1.9.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material3:material3-android:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/2e2dea600606eee2435ccff75ec1a017/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/aa804327a6709a90ca8820c0c0061091/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/3c3749caec315fd6029eebcbe2bde277/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/6d54bfb49ac440a14f1e506cc40c98e1/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/628faedc05b49de5544fa65e1af20196/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/8b5d171d24b92de35306a7ab721571df/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/a7e9a2710e9101d0c1124c3a175dd835/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/3a90fcededca22ca2ae6fc3699d13b13/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/49b4cdf39f1c376633e755f001eb5ba4/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/dac2d9105837e1ce903172f7afa562ea/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/5e96d78b1e1449d1ba2940d36b26aebc/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/ee9b777545be7f7a12128966e5b15fd8/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/2bb7c5e37297bcccb6b86aa56d6f3eeb/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/94cbbe01be77578a199591e8e60c6a27/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/claudio/.gradle/caches/9.3.0/transforms/bd58494f112707a01da1c7afd976c423/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/claudio/.gradle/caches/9.3.0/transforms/3d4ba80cfe10af39e52defff8c57db74/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/06ff7be41d12dc4bc622fa8fcf61f5c4/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/0e9231551e935ea46bfe60b117334f86/transformed/lifecycle-livedata-core-2.8.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/835ae2ea0d08da7fd95f8efcc956e2a4/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/claudio/.gradle/caches/9.3.0/transforms/0b39a177010847c56fa42fc17220d153/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/6f2439c601bf7ca2156f4b0db0cdd135/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/46bd81312cc2d44d8754ade29d02b39b/transformed/core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/cf1bb0f925ac5f6143df39da8dae1b8a/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/464affd3e6b7075ea7cda627098203f0/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e7eb274682424a3eb65368b4394eaa56/transformed/lifecycle-viewmodel-savedstate-2.8.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e9b5d95311743350383ff8a0c2138f21/transformed/lifecycle-viewmodel-ktx-2.8.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/62776d871ec0fe3103c259655be3aa00/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e8c9c26cc3efd84fba78e398758554e5/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/023458464eae1117aa3c61c39bfb363f/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/76cb5836b35eb98c9978e060e64f7561/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/7feb4052b30224eabf0124975e0c43c3/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/7868f379a0a0ce944f407ad2d497dd21/transformed/activity-ktx-1.9.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/d18e7bb7fc08b1c732c2e479de19d6af/transformed/activity-compose-1.9.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/4cf1b0f30102cbec686557ebe0f1eeb9/transformed/datastore-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/4f2a43e47c055e5f4789de722ae8011f/transformed/datastore-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/682262afcf47297f079c43cfe5726d69/transformed/datastore-preferences-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.1] /home/claudio/.gradle/caches/9.3.0/transforms/6f800c3f95e25a709b3042279d297cfc/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.7.1] /home/claudio/.gradle/caches/9.3.0/transforms/7f89adb45a0e60a8fb88ad6cbcf013a4/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/claudio/.gradle/caches/9.3.0/transforms/1d63eada7070515e4dd96d6c250b7e54/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/40ea8cb2d5ed54328a48bbf6f54616a1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/e8087f77945d0dc641377006375b03eb/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/2c901c52a129ff37bf940d75e175baf7/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/claudio/.gradle/caches/9.3.0/transforms/bfda10995d927810358e1973c8c730bd/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/10a0dd64965b2425d819539237286441/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:4:22-64
+application
+ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:6:5-21:19
+INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:6:5-21:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/40ea8cb2d5ed54328a48bbf6f54616a1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/40ea8cb2d5ed54328a48bbf6f54616a1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/e8087f77945d0dc641377006375b03eb/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/e8087f77945d0dc641377006375b03eb/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:9:9-41
+	android:icon
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:10:9-48
+	android:usesCleartextTraffic
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:11:9-44
+activity#br.edu.ufmt.mothercare.app.MainActivity
+ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:12:9-20:20
+	android:exported
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:14:13-36
+	android:theme
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:15:13-52
+	android:name
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:13:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:16:13-19:29
+action#android.intent.action.MAIN
+ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml:18:27-74
+uses-sdk
+INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.navigation:navigation-common:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/a3b7fee0309a9995bb3ca44eaa3039fd/transformed/navigation-common-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/a3b7fee0309a9995bb3ca44eaa3039fd/transformed/navigation-common-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/569ff2539c3634477185f35ba2481065/transformed/navigation-runtime-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/569ff2539c3634477185f35ba2481065/transformed/navigation-runtime-2.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/a7858f9f2c012efdc17b783afcd2a555/transformed/navigation-common-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/a7858f9f2c012efdc17b783afcd2a555/transformed/navigation-common-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/33822f03e81621f02d50019d3a16a65e/transformed/navigation-runtime-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/33822f03e81621f02d50019d3a16a65e/transformed/navigation-runtime-ktx-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/3a8f8c1e4985fcdce6c9e510a9f3aa4b/transformed/navigation-compose-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.0] /home/claudio/.gradle/caches/9.3.0/transforms/3a8f8c1e4985fcdce6c9e510a9f3aa4b/transformed/navigation-compose-2.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/fe56763aedfcee491da0af72b3b3102c/transformed/activity-1.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/fe56763aedfcee491da0af72b3b3102c/transformed/activity-1.9.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/2e2dea600606eee2435ccff75ec1a017/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/2e2dea600606eee2435ccff75ec1a017/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/aa804327a6709a90ca8820c0c0061091/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/aa804327a6709a90ca8820c0c0061091/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/3c3749caec315fd6029eebcbe2bde277/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/3c3749caec315fd6029eebcbe2bde277/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/6d54bfb49ac440a14f1e506cc40c98e1/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/6d54bfb49ac440a14f1e506cc40c98e1/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/628faedc05b49de5544fa65e1af20196/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/628faedc05b49de5544fa65e1af20196/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/8b5d171d24b92de35306a7ab721571df/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/8b5d171d24b92de35306a7ab721571df/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/a7e9a2710e9101d0c1124c3a175dd835/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/a7e9a2710e9101d0c1124c3a175dd835/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/3a90fcededca22ca2ae6fc3699d13b13/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/3a90fcededca22ca2ae6fc3699d13b13/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/49b4cdf39f1c376633e755f001eb5ba4/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/49b4cdf39f1c376633e755f001eb5ba4/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/dac2d9105837e1ce903172f7afa562ea/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/dac2d9105837e1ce903172f7afa562ea/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/5e96d78b1e1449d1ba2940d36b26aebc/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/5e96d78b1e1449d1ba2940d36b26aebc/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/ee9b777545be7f7a12128966e5b15fd8/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/ee9b777545be7f7a12128966e5b15fd8/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/2bb7c5e37297bcccb6b86aa56d6f3eeb/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/2bb7c5e37297bcccb6b86aa56d6f3eeb/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/94cbbe01be77578a199591e8e60c6a27/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/94cbbe01be77578a199591e8e60c6a27/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/claudio/.gradle/caches/9.3.0/transforms/bd58494f112707a01da1c7afd976c423/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/claudio/.gradle/caches/9.3.0/transforms/bd58494f112707a01da1c7afd976c423/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/claudio/.gradle/caches/9.3.0/transforms/3d4ba80cfe10af39e52defff8c57db74/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/claudio/.gradle/caches/9.3.0/transforms/3d4ba80cfe10af39e52defff8c57db74/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/06ff7be41d12dc4bc622fa8fcf61f5c4/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/06ff7be41d12dc4bc622fa8fcf61f5c4/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/0e9231551e935ea46bfe60b117334f86/transformed/lifecycle-livedata-core-2.8.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/0e9231551e935ea46bfe60b117334f86/transformed/lifecycle-livedata-core-2.8.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/835ae2ea0d08da7fd95f8efcc956e2a4/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/835ae2ea0d08da7fd95f8efcc956e2a4/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/claudio/.gradle/caches/9.3.0/transforms/0b39a177010847c56fa42fc17220d153/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /home/claudio/.gradle/caches/9.3.0/transforms/0b39a177010847c56fa42fc17220d153/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/6f2439c601bf7ca2156f4b0db0cdd135/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/6f2439c601bf7ca2156f4b0db0cdd135/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/46bd81312cc2d44d8754ade29d02b39b/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/46bd81312cc2d44d8754ade29d02b39b/transformed/core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/cf1bb0f925ac5f6143df39da8dae1b8a/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/cf1bb0f925ac5f6143df39da8dae1b8a/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/464affd3e6b7075ea7cda627098203f0/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/464affd3e6b7075ea7cda627098203f0/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e7eb274682424a3eb65368b4394eaa56/transformed/lifecycle-viewmodel-savedstate-2.8.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e7eb274682424a3eb65368b4394eaa56/transformed/lifecycle-viewmodel-savedstate-2.8.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e9b5d95311743350383ff8a0c2138f21/transformed/lifecycle-viewmodel-ktx-2.8.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e9b5d95311743350383ff8a0c2138f21/transformed/lifecycle-viewmodel-ktx-2.8.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/62776d871ec0fe3103c259655be3aa00/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/62776d871ec0fe3103c259655be3aa00/transformed/lifecycle-runtime-ktx-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e8c9c26cc3efd84fba78e398758554e5/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/e8c9c26cc3efd84fba78e398758554e5/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/023458464eae1117aa3c61c39bfb363f/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/023458464eae1117aa3c61c39bfb363f/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/76cb5836b35eb98c9978e060e64f7561/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/76cb5836b35eb98c9978e060e64f7561/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/7feb4052b30224eabf0124975e0c43c3/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/7feb4052b30224eabf0124975e0c43c3/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/7868f379a0a0ce944f407ad2d497dd21/transformed/activity-ktx-1.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/7868f379a0a0ce944f407ad2d497dd21/transformed/activity-ktx-1.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/d18e7bb7fc08b1c732c2e479de19d6af/transformed/activity-compose-1.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.2] /home/claudio/.gradle/caches/9.3.0/transforms/d18e7bb7fc08b1c732c2e479de19d6af/transformed/activity-compose-1.9.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/4cf1b0f30102cbec686557ebe0f1eeb9/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/4cf1b0f30102cbec686557ebe0f1eeb9/transformed/datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/4f2a43e47c055e5f4789de722ae8011f/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/4f2a43e47c055e5f4789de722ae8011f/transformed/datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/682262afcf47297f079c43cfe5726d69/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/682262afcf47297f079c43cfe5726d69/transformed/datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.1] /home/claudio/.gradle/caches/9.3.0/transforms/6f800c3f95e25a709b3042279d297cfc/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.1] /home/claudio/.gradle/caches/9.3.0/transforms/6f800c3f95e25a709b3042279d297cfc/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.1] /home/claudio/.gradle/caches/9.3.0/transforms/7f89adb45a0e60a8fb88ad6cbcf013a4/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.1] /home/claudio/.gradle/caches/9.3.0/transforms/7f89adb45a0e60a8fb88ad6cbcf013a4/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/claudio/.gradle/caches/9.3.0/transforms/1d63eada7070515e4dd96d6c250b7e54/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/claudio/.gradle/caches/9.3.0/transforms/1d63eada7070515e4dd96d6c250b7e54/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/40ea8cb2d5ed54328a48bbf6f54616a1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/40ea8cb2d5ed54328a48bbf6f54616a1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/e8087f77945d0dc641377006375b03eb/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/e8087f77945d0dc641377006375b03eb/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/2c901c52a129ff37bf940d75e175baf7/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/2c901c52a129ff37bf940d75e175baf7/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/claudio/.gradle/caches/9.3.0/transforms/bfda10995d927810358e1973c8c730bd/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/claudio/.gradle/caches/9.3.0/transforms/bfda10995d927810358e1973c8c730bd/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/10a0dd64965b2425d819539237286441/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/claudio/.gradle/caches/9.3.0/transforms/10a0dd64965b2425d819539237286441/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/claudio/Downloads/mothercare-android/app/src/main/AndroidManifest.xml
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0] /home/claudio/.gradle/caches/9.3.0/transforms/15599b3f29bd05aa97ea6b0d275b2ff9/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/e8087f77945d0dc641377006375b03eb/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/claudio/.gradle/caches/9.3.0/transforms/e8087f77945d0dc641377006375b03eb/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/claudio/.gradle/caches/9.3.0/transforms/bdc32a7e5415a21d77db05aadcfdae20/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] /home/claudio/.gradle/caches/9.3.0/transforms/c21f97034599eb11b7b97b7c1a677842/transformed/lifecycle-process-2.8.6/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#br.edu.ufmt.mothercare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#br.edu.ufmt.mothercare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /home/claudio/.gradle/caches/9.3.0/transforms/3eded3decfa7726a29adc2694faa896a/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/claudio/.gradle/caches/9.3.0/transforms/d33a7f5f38d7ad64bf39b0cc4f483f51/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
