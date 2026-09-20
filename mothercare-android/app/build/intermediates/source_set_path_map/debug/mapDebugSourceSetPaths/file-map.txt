@@ -49,10 +49,10 @@ br.edu.ufmt.mothercare.app-lifecycle-viewmodel-compose-release-47 /home/claudio/
 br.edu.ufmt.mothercare.app-lifecycle-viewmodel-ktx-2.8.6-48 /home/claudio/.gradle/caches/9.3.0/transforms/e9b5d95311743350383ff8a0c2138f21/transformed/lifecycle-viewmodel-ktx-2.8.6/res
 br.edu.ufmt.mothercare.app-ui-text-release-49 /home/claudio/.gradle/caches/9.3.0/transforms/ee9b777545be7f7a12128966e5b15fd8/transformed/ui-text-release/res
 br.edu.ufmt.mothercare.app-activity-1.9.2-50 /home/claudio/.gradle/caches/9.3.0/transforms/fe56763aedfcee491da0af72b3b3102c/transformed/activity-1.9.2/res
-br.edu.ufmt.mothercare.app-pngs-51 /home/claudio/Downloads/mothercare-android/app/build/generated/res/pngs/debug
-br.edu.ufmt.mothercare.app-resValues-52 /home/claudio/Downloads/mothercare-android/app/build/generated/res/resValues/debug
-br.edu.ufmt.mothercare.app-packageDebugResources-53 /home/claudio/Downloads/mothercare-android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-br.edu.ufmt.mothercare.app-packageDebugResources-54 /home/claudio/Downloads/mothercare-android/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-br.edu.ufmt.mothercare.app-debug-55 /home/claudio/Downloads/mothercare-android/app/build/intermediates/merged_res/debug/mergeDebugResources
-br.edu.ufmt.mothercare.app-debug-56 /home/claudio/Downloads/mothercare-android/app/src/debug/res
-br.edu.ufmt.mothercare.app-main-57 /home/claudio/Downloads/mothercare-android/app/src/main/res
+br.edu.ufmt.mothercare.app-pngs-51 /home/claudio/Desktop/app/mothercare-android/app/build/generated/res/pngs/debug
+br.edu.ufmt.mothercare.app-resValues-52 /home/claudio/Desktop/app/mothercare-android/app/build/generated/res/resValues/debug
+br.edu.ufmt.mothercare.app-packageDebugResources-53 /home/claudio/Desktop/app/mothercare-android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+br.edu.ufmt.mothercare.app-packageDebugResources-54 /home/claudio/Desktop/app/mothercare-android/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+br.edu.ufmt.mothercare.app-debug-55 /home/claudio/Desktop/app/mothercare-android/app/build/intermediates/merged_res/debug/mergeDebugResources
+br.edu.ufmt.mothercare.app-debug-56 /home/claudio/Desktop/app/mothercare-android/app/src/debug/res
+br.edu.ufmt.mothercare.app-main-57 /home/claudio/Desktop/app/mothercare-android/app/src/main/res

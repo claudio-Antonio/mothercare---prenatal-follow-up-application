@@ -4544,23 +4544,6 @@
                     }
                 },
                 {
-                    "source": "/home/claudio/Downloads/mothercare-android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "48",
-                        "endOffsets": "60"
-                    },
-                    "to": {
-                        "startLines": "102",
-                        "startColumns": "4",
-                        "startOffsets": "6212",
-                        "endColumns": "48",
-                        "endOffsets": "6256"
-                    }
-                },
-                {
                     "source": "/home/claudio/.gradle/caches/9.3.0/transforms/7feb4052b30224eabf0124975e0c43c3/transformed/ui-release/res/values/values.xml",
                     "from": {
                         "startLines": "34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,61,64",
@@ -4632,6 +4615,23 @@
                         "endLines": "357,363,369,372,383",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "19391,19635,19882,20015,20427"
+                    }
+                },
+                {
+                    "source": "/home/claudio/Desktop/app/mothercare-android/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "63",
+                        "endColumns": "87",
+                        "endOffsets": "146"
+                    },
+                    "to": {
+                        "startLines": "226",
+                        "startColumns": "4",
+                        "startOffsets": "14462",
+                        "endColumns": "86",
+                        "endOffsets": "14544"
                     }
                 },
                 {
@@ -4720,20 +4720,20 @@
                     }
                 },
                 {
-                    "source": "/home/claudio/Downloads/mothercare-android/app/src/main/res/values/themes.xml",
+                    "source": "/home/claudio/Desktop/app/mothercare-android/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "63",
-                        "endColumns": "87",
-                        "endOffsets": "146"
+                        "startOffsets": "16",
+                        "endColumns": "48",
+                        "endOffsets": "60"
                     },
                     "to": {
-                        "startLines": "226",
+                        "startLines": "102",
                         "startColumns": "4",
-                        "startOffsets": "14462",
-                        "endColumns": "86",
-                        "endOffsets": "14544"
+                        "startOffsets": "6212",
+                        "endColumns": "48",
+                        "endOffsets": "6256"
                     }
                 }
             ]
