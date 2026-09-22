@@ -19,4 +19,8 @@ class AppContainer(context: Context) {
     val checklistRepository = ChecklistRepository(clinicalApi)
     val checkInRepository = CheckInRepository(clinicalApi)
     val agendamentoRepository = AgendamentoRepository(schedulingApi)
+
+    val pesoRepository = PesoRepository(clinicalApi)
+    val exameRepository = ExameRepository(clinicalApi)
+    val prontuarioRepository = ProntuarioRepository(clinicalApi)
 }

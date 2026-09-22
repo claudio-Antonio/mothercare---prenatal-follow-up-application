@@ -5,6 +5,7 @@ import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MonitorHeart
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -24,7 +25,8 @@ val abasHome = listOf(
     Aba("Início", Icons.Filled.Home),
     Aba("Exames", Icons.Filled.CheckCircle),
     Aba("Check-in", Icons.Filled.MonitorHeart),
-    Aba("Consultas", Icons.Filled.CalendarMonth)
+    Aba("Consultas", Icons.Filled.CalendarMonth),
+    Aba("Mais", Icons.Filled.MoreHoriz)
 )
 
 @Composable
@@ -48,8 +50,8 @@ private fun BottomBarPreview() {
     MotherCareTheme { MotherCareBottomBar(selecionada) { selecionada = it } }
 }
 
-@Preview(showBackground = true, name = "Bottom bar - aba Check-in")
+@Preview(showBackground = true, name = "Bottom bar - aba Mais")
 @Composable
-private fun BottomBarPreviewCheckIn() {
-    MotherCareTheme { MotherCareBottomBar(abaSelecionada = 2, onAbaSelecionada = {}) }
+private fun BottomBarPreviewMais() {
+    MotherCareTheme { MotherCareBottomBar(abaSelecionada = 4, onAbaSelecionada = {}) }
 }

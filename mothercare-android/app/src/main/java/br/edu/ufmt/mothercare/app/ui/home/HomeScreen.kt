@@ -9,23 +9,16 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 import br.edu.ufmt.mothercare.app.data.AppContainer
 import br.edu.ufmt.mothercare.app.ui.agendamento.AgendamentoScreen
 import br.edu.ufmt.mothercare.app.ui.checkin.CheckInScreen
 import br.edu.ufmt.mothercare.app.ui.checklist.ChecklistScreen
 import br.edu.ufmt.mothercare.app.ui.dashboard.DashboardScreen
+import br.edu.ufmt.mothercare.app.ui.navigation.Routes
 
-/**
- * Tela raiz pós-login: navegação inferior entre Dashboard (UC02),
- * Checklist de exames (UC06), Check-in de PA (UC04/RN02) e
- * Agendamento (UC03/RN04/RF04-RF05), todas escopadas na mesma
- * gestanteId. Sem @Preview aqui de propósito — depende do
- * AppContainer de verdade, e cada aba dispara chamada de rede real no
- * init{} do respectivo ViewModel. A barra inferior em si (parte
- * puramente visual) tem preview em BottomNavBar.kt.
- */
 @Composable
-fun HomeScreen(gestanteId: String, container: AppContainer) {
+fun HomeScreen(gestanteId: String, container: AppContainer, navController: NavHostController) {
     var abaSelecionada by rememberSaveable { mutableIntStateOf(0) }
 
     Scaffold(
@@ -37,6 +30,11 @@ fun HomeScreen(gestanteId: String, container: AppContainer) {
                 1 -> ChecklistScreen(gestanteId, container.checklistRepository)
                 2 -> CheckInScreen(gestanteId, container.checkInRepository)
                 3 -> AgendamentoScreen(gestanteId, container.agendamentoRepository)
+                4 -> MaisScreen(
+                    aoAbrirPeso = { navController.navigate(Routes.peso(gestanteId)) },
+                    aoAbrirExame = { navController.navigate(Routes.exame(gestanteId)) },
+                    aoAbrirProntuario = { navController.navigate(Routes.prontuario(gestanteId)) }
+                )
             }
         }
     }
