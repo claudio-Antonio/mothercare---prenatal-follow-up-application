@@ -3,9 +3,11 @@ package br.edu.ufmt.mothercare.app.ui.home
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.MonitorWeight
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Science
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -23,12 +25,15 @@ private data class ItemMais(val titulo: String, val subtitulo: String, val icone
 fun MaisScreen(
     aoAbrirPeso: () -> Unit,
     aoAbrirExame: () -> Unit,
-    aoAbrirProntuario: () -> Unit
+    aoAbrirProntuario: () -> Unit,
+    aoAbrirPerfil: () -> Unit = {},
+    aoSair: () -> Unit = {}
 ) {
     val itens = listOf(
         ItemMais("Monitoramento de peso", "Registrar peso e ver evolução (UC09)", Icons.Filled.MonitorWeight, aoAbrirPeso),
         ItemMais("Registrar exame laboratorial", "Hemoglobina e glicemia de jejum (UC08)", Icons.Filled.Science, aoAbrirExame),
-        ItemMais("Prontuário digital", "Laudos e exames enviados (UC07)", Icons.Filled.Description, aoAbrirProntuario)
+        ItemMais("Prontuário digital", "Laudos e exames enviados (UC07)", Icons.Filled.Description, aoAbrirProntuario),
+        ItemMais("Meu perfil", "Corrigir DUM, peso e altura · médico responsável", Icons.Filled.Person, aoAbrirPerfil)
     )
 
     Column(modifier = Modifier.fillMaxSize().padding(20.dp)) {
@@ -54,6 +59,13 @@ fun MaisScreen(
                 }
             }
             Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        OutlinedButton(onClick = aoSair, modifier = Modifier.fillMaxWidth()) {
+            Icon(Icons.AutoMirrored.Filled.Logout, contentDescription = null)
+            Spacer(modifier = Modifier.width(8.dp))
+            Text("Sair")
         }
     }
 }

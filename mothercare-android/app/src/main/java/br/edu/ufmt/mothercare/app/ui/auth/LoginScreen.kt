@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import br.edu.ufmt.mothercare.app.data.repository.AuthRepository
+import br.edu.ufmt.mothercare.app.data.repository.GestanteRepository
 import br.edu.ufmt.mothercare.app.ui.components.ErrorBanner
 import br.edu.ufmt.mothercare.app.ui.components.GenericViewModelFactory
 import br.edu.ufmt.mothercare.app.ui.components.PrimaryButton
@@ -30,20 +31,25 @@ import br.edu.ufmt.mothercare.app.ui.theme.MotherCareTheme
 @Composable
 fun LoginScreen(
     authRepository: AuthRepository,
-    aoLogar: (usuarioId: String) -> Unit,
-    aoIrParaCadastro: () -> Unit
+    gestanteRepository: GestanteRepository,
+    aoLogar: (DestinoLogin) -> Unit,
+    aoIrParaCadastro: () -> Unit,
+    mensagemInicial: String? = null
 ) {
-    val viewModel: LoginViewModel = viewModel(factory = GenericViewModelFactory { LoginViewModel(authRepository) })
+    val viewModel: LoginViewModel = viewModel(
+        factory = GenericViewModelFactory { LoginViewModel(authRepository, gestanteRepository) }
+    )
     val estado by viewModel.uiState.collectAsState()
 
-    LaunchedEffect(estado.loginConcluido) {
-        if (estado.loginConcluido && estado.usuarioId != null) {
-            aoLogar(estado.usuarioId!!)
+    LaunchedEffect(estado.destino) {
+        estado.destino?.let {
+            viewModel.navegacaoConsumida()
+            aoLogar(it)
         }
     }
 
     LoginScreenContent(
-        estado = estado,
+        estado = if (estado.erro == null && mensagemInicial != null) estado.copy(erro = mensagemInicial) else estado,
         onEmailChange = viewModel::onEmailChange,
         onSenhaChange = viewModel::onSenhaChange,
         onLoginClick = viewModel::login,

@@ -76,6 +76,8 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
       MOTHERCARE_JWT_SECRET: ${MOTHERCARE_JWT_SECRET}
       MOTHERCARE_JWT_EXPIRACAO_MINUTOS: ${MOTHERCARE_JWT_EXPIRACAO_MINUTOS}
+      MOTHERCARE_CHAVE_CADASTRO_MEDICO: ${MOTHERCARE_CHAVE_CADASTRO_MEDICO:-}
+      TZ: ${MOTHERCARE_TZ:-America/Cuiaba}
     ports:
       - "${AUTH_SERVICE_PORT}:${AUTH_SERVICE_PORT}"
     depends_on:
@@ -91,6 +93,10 @@ services:
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
       MOTHERCARE_JWT_SECRET: ${MOTHERCARE_JWT_SECRET}
+      # Sem esta linha o clinical caía no default localhost:8081 dentro do
+      # container e o painel do médico nunca mostrava o nome da gestante.
+      AUTH_SERVICE_URL: ${AUTH_SERVICE_URL}
+      TZ: ${MOTHERCARE_TZ:-America/Cuiaba}
     ports:
       - "${CLINICAL_SERVICE_PORT}:${CLINICAL_SERVICE_PORT}"
     depends_on:
@@ -107,6 +113,9 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD}
       MOTHERCARE_JWT_SECRET: ${MOTHERCARE_JWT_SECRET}
       CLINICAL_SERVICE_URL: ${CLINICAL_SERVICE_URL}
+      # O app envia data/hora local (LocalDateTime); sem TZ o container roda em
+      # UTC e o @Future recusava horários das próximas 4 h.
+      TZ: ${MOTHERCARE_TZ:-America/Cuiaba}
     ports:
       - "${SCHEDULING_SERVICE_PORT}:${SCHEDULING_SERVICE_PORT}"
     depends_on:
@@ -124,6 +133,7 @@ services:
       MOTHERCARE_ROUTE_AUTH: ${MOTHERCARE_ROUTE_AUTH}
       MOTHERCARE_ROUTE_CLINICAL: ${MOTHERCARE_ROUTE_CLINICAL}
       MOTHERCARE_ROUTE_SCHEDULING: ${MOTHERCARE_ROUTE_SCHEDULING}
+      TZ: ${MOTHERCARE_TZ:-America/Cuiaba}
     ports:
       - "${API_GATEWAY_PORT}:${API_GATEWAY_PORT}"
     depends_on:

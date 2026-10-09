@@ -1,13 +1,13 @@
 server:
-  port: 8082
+  port: ${SERVER_PORT:8082}
 
 spring:
   application:
     name: clinical-service
   datasource:
-    url: jdbc:postgresql://localhost:5434/mothercare_clinical
-    username: mothercare
-    password: mothercare
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5434/mothercare_clinical}
+    username: ${SPRING_DATASOURCE_USERNAME:mothercare}
+    password: ${SPRING_DATASOURCE_PASSWORD:mothercare}
   jpa:
     hibernate:
       ddl-auto: update
@@ -25,4 +25,6 @@ spring:
 
 mothercare:
   jwt:
-    secret: ${MOTHERCARE_JWT_SECRET:troque-esta-chave-em-producao-mothercare-2026-min-32-bytes}
+    secret: ${MOTHERCARE_JWT_SECRET}
+  auth-service:
+    base-url: ${AUTH_SERVICE_URL:http://localhost:8081}

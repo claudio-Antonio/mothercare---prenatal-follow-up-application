@@ -11,3 +11,18 @@ data class ResultadoTriagemPressaoResponse(
     val agendamentoLiberado: Boolean,
     val mensagem: String
 )
+
+/** Último check-in (RF04/RF05): CRITICO bloqueia o agendamento eletivo. registradoEm null = nunca fez check-in. */
+data class UltimoStatusPressaoResponse(
+    val gestanteId: String,
+    val nivelRisco: String,
+    val registradoEm: String?
+)
+
+data class RegistroPressaoResponse(
+    val id: String,
+    val sistolica: Int,
+    val diastolica: Int,
+    val nivelRisco: String,
+    val registradoEm: String // Instant ISO (UTC)
+)

@@ -3,6 +3,7 @@ package br.edu.ufmt.mothercare.clinical.dto
 import br.edu.ufmt.mothercare.clinical.entity.TipoExame
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Positive
+import java.time.Instant
 import java.util.UUID
 
 /** UC07/UC08: entrada de resultado laboratorial (manual ou upload). RN03. */
@@ -26,4 +27,14 @@ data class ExameLaboratorialResponse(
     val valor: Double,
     val alertaDisparado: Boolean,
     val mensagem: String
+)
+
+/** Histórico laboratorial (GET /exames/{gestanteId}), do mais recente ao mais antigo. */
+data class ExameHistoricoResponse(
+    val id: UUID,
+    val tipo: TipoExame,
+    val valor: Double,
+    val alertaDisparado: Boolean,
+    val documentoId: UUID?,
+    val registradoEm: Instant
 )

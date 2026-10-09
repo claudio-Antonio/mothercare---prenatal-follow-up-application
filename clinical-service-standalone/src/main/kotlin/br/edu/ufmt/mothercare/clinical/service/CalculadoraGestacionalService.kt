@@ -44,7 +44,10 @@ class CalculadoraGestacionalService {
             semanas = semanas,
             dias = dias,
             trimestre = Trimestre.apartirDaSemana(semanas.toInt()),
-            imcInicial = gestante.imcInicial()
+            imcInicial = gestante.imcInicial(),
+            pesoInicialKg = gestante.pesoInicialKg,
+            alturaMetros = gestante.alturaMetros,
+            medicoVinculado = gestante.medicoId != null
         )
     }
 }

@@ -14,6 +14,15 @@ class JwtUtil(
         Keys.hmacShaKeyFor(secret.toByteArray(StandardCharsets.UTF_8))
     }
 
+    /** Claim "papel" (GESTANTE|MEDICO); null se o token for inválido. */
+    fun extrairPapel(token: String): String? =
+        try {
+            Jwts.parser().verifyWith(signingKey).build()
+                .parseSignedClaims(token).payload["papel"] as? String
+        } catch (ex: Exception) {
+            null
+        }
+
     fun validarEExtrairSubject(token: String): String? =
         try {
             Jwts.parser().verifyWith(signingKey).build()

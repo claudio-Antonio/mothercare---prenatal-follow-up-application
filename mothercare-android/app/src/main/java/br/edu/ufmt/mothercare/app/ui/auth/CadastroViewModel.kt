@@ -15,8 +15,10 @@ data class CadastroUiState(
     val senha: String = "",
     val carregando: Boolean = false,
     val erro: String? = null,
-    val usuarioId: String? = null,
-    val cadastroConcluido: Boolean = false
+    /** UC01/A1: email já cadastrado → oferecer ir pro login. */
+    val emailJaCadastrado: Boolean = false,
+    /** Evento de navegação (consumido): id do usuário recém-criado. */
+    val usuarioIdCriado: String? = null
 )
 
 class CadastroViewModel(private val repository: AuthRepository) : ViewModel() {
@@ -24,16 +26,20 @@ class CadastroViewModel(private val repository: AuthRepository) : ViewModel() {
     val uiState: StateFlow<CadastroUiState> = _uiState.asStateFlow()
 
     fun onNomeChange(valor: String) { _uiState.value = _uiState.value.copy(nome = valor) }
-    fun onEmailChange(valor: String) { _uiState.value = _uiState.value.copy(email = valor) }
+    fun onEmailChange(valor: String) { _uiState.value = _uiState.value.copy(email = valor, emailJaCadastrado = false) }
     fun onSenhaChange(valor: String) { _uiState.value = _uiState.value.copy(senha = valor) }
 
+    fun navegacaoConsumida() { _uiState.value = _uiState.value.copy(usuarioIdCriado = null) }
+
     fun cadastrar() {
-        _uiState.value = _uiState.value.copy(carregando = true, erro = null)
+        _uiState.value = _uiState.value.copy(carregando = true, erro = null, emailJaCadastrado = false)
         viewModelScope.launch {
             val resultado = repository.registrar(_uiState.value.nome.trim(), _uiState.value.email.trim(), _uiState.value.senha)
             _uiState.value = when (resultado) {
-                is Resultado.Sucesso -> _uiState.value.copy(carregando = false, usuarioId = resultado.dados.usuario.id, cadastroConcluido = true)
-                is Resultado.Erro -> _uiState.value.copy(carregando = false, erro = resultado.mensagem)
+                is Resultado.Sucesso -> _uiState.value.copy(carregando = false, usuarioIdCriado = resultado.dados.usuario.id)
+                is Resultado.Erro -> _uiState.value.copy(
+                    carregando = false, erro = resultado.mensagem, emailJaCadastrado = resultado.codigoHttp == 409
+                )
             }
         }
     }

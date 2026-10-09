@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.security.JwtAuthenticationFilterTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:52:21.689Z" hostname="claudio-nery" time="0.225">
+  <properties/>
+  <testcase name="deve ignorar X-Auth-Role forjado quando o token traz outro papel()" classname="br.edu.ufmt.mothercare.clinical.security.JwtAuthenticationFilterTest" time="0.104"/>
+  <testcase name="nao deve autenticar apenas com headers X-Auth-User e X-Auth-Role (podem ser forjados)()" classname="br.edu.ufmt.mothercare.clinical.security.JwtAuthenticationFilterTest" time="0.001"/>
+  <testcase name="nao deve autenticar quando nao ha token nem headers propagados()" classname="br.edu.ufmt.mothercare.clinical.security.JwtAuthenticationFilterTest" time="0.001"/>
+  <testcase name="nao deve autenticar com token invalido()" classname="br.edu.ufmt.mothercare.clinical.security.JwtAuthenticationFilterTest" time="0.003"/>
+  <testcase name="deve extrair subject e papel do token quando Authorization esta presente()" classname="br.edu.ufmt.mothercare.clinical.security.JwtAuthenticationFilterTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

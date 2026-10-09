@@ -21,17 +21,20 @@ class Gestante(
     val usuarioId: UUID,
 
     @Column(nullable = false)
-    val dataUltimaMenstruacao: LocalDate,
+    var dataUltimaMenstruacao: LocalDate,
 
     @Column(nullable = false)
-    val pesoInicialKg: Double,
+    var pesoInicialKg: Double,
 
     @Column(nullable = false)
-    val alturaMetros: Double,
+    var alturaMetros: Double,
+
+    /** Vínculo médico↔gestante. Nullable: nem toda gestante tem médico associado no cadastro. */
+    @Column
+    var medicoId: UUID? = null,
 
     @Column(nullable = false)
     val criadaEm: LocalDate = LocalDate.now()
 ) {
-    /** IMC pré-gestacional = peso (kg) / altura² (m). Base para RN05. */
     fun imcInicial(): Double = pesoInicialKg / (alturaMetros * alturaMetros)
 }

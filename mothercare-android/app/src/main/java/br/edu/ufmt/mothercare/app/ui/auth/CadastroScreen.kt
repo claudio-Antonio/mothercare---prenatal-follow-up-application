@@ -33,9 +33,10 @@ fun CadastroScreen(
     val viewModel: CadastroViewModel = viewModel(factory = GenericViewModelFactory { CadastroViewModel(authRepository) })
     val estado by viewModel.uiState.collectAsState()
 
-    LaunchedEffect(estado.cadastroConcluido) {
-        if (estado.cadastroConcluido && estado.usuarioId != null) {
-            aoCadastrar(estado.usuarioId!!)
+    LaunchedEffect(estado.usuarioIdCriado) {
+        estado.usuarioIdCriado?.let {
+            viewModel.navegacaoConsumida()
+            aoCadastrar(it)
         }
     }
 
@@ -89,6 +90,10 @@ fun CadastroScreenContent(
         Spacer(modifier = Modifier.height(24.dp))
 
         estado.erro?.let { ErrorBanner(it) }
+        if (estado.emailJaCadastrado) {
+            OutlinedButton(onClick = onVoltarClick, modifier = Modifier.fillMaxWidth()) { Text("Ir para o login") }
+            Spacer(modifier = Modifier.height(8.dp))
+        }
 
         PrimaryButton(texto = "Cadastrar", carregando = estado.carregando) { onCadastrarClick() }
 
@@ -109,7 +114,7 @@ private fun CadastroScreenPreviewErro() {
     MotherCareTheme {
         CadastroScreenContent(
             CadastroUiState(nome = "Maria Teste", email = "maria@teste.com", senha = "senhaForte123",
-                erro = "Já existe uma conta cadastrada com o email 'maria@teste.com'"),
+                erro = "Já existe uma conta cadastrada com o email 'maria@teste.com'", emailJaCadastrado = true),
             {}, {}, {}, {}, {}
         )
     }

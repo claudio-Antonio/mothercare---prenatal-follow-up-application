@@ -5,6 +5,7 @@ import br.edu.ufmt.mothercare.clinical.dto.PontoGraficoPeso
 import br.edu.ufmt.mothercare.clinical.dto.RegistroPesoRequest
 import br.edu.ufmt.mothercare.clinical.entity.Gestante
 import br.edu.ufmt.mothercare.clinical.entity.RegistroPeso
+import br.edu.ufmt.mothercare.clinical.entity.TipoNotificacao
 import br.edu.ufmt.mothercare.clinical.entity.Trimestre
 import br.edu.ufmt.mothercare.clinical.repository.RegistroPesoRepository
 import org.springframework.stereotype.Service
@@ -22,7 +23,8 @@ import java.time.temporal.ChronoUnit
 @Service
 class MonitoramentoPesoService(
     private val repository: RegistroPesoRepository,
-    private val calculadoraGestacional: CalculadoraGestacionalService
+    private val calculadoraGestacional: CalculadoraGestacionalService,
+    private val notificacaoService: NotificacaoService
 ) {
     companion object {
         const val LIMIAR_GANHO_MENSAL_KG = 1.5
@@ -31,7 +33,11 @@ class MonitoramentoPesoService(
     @Transactional
     fun registrar(gestante: Gestante, request: RegistroPesoRequest): GraficoPesoResponse {
         repository.save(RegistroPeso(gestanteId = request.gestanteId, pesoKg = request.pesoKg))
-        return montarGrafico(gestante)
+        val grafico = montarGrafico(gestante)
+        // Seção 8.4: o alerta de ganho excessivo vai só para a gestante. Notifica no registro
+        // (não na consulta do gráfico), para não repetir o aviso a cada abertura da tela.
+        grafico.mensagem?.let { notificacaoService.notificarGestante(gestante, TipoNotificacao.GANHO_PESO_EXCESSIVO, it) }
+        return grafico
     }
 
     fun montarGrafico(gestante: Gestante): GraficoPesoResponse {

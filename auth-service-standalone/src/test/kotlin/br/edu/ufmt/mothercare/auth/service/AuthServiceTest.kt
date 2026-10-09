@@ -4,6 +4,7 @@ import br.edu.ufmt.mothercare.auth.dto.CadastroRequest
 import br.edu.ufmt.mothercare.auth.dto.LoginRequest
 import br.edu.ufmt.mothercare.auth.entity.Papel
 import br.edu.ufmt.mothercare.auth.entity.Usuario
+import br.edu.ufmt.mothercare.auth.exception.CadastroMedicoNaoAutorizadoException
 import br.edu.ufmt.mothercare.auth.exception.CredenciaisInvalidasException
 import br.edu.ufmt.mothercare.auth.exception.EmailJaCadastradoException
 import br.edu.ufmt.mothercare.auth.repository.UsuarioRepository
@@ -28,7 +29,7 @@ class AuthServiceTest {
 
     @BeforeEach
     fun setUp() {
-        authService = AuthService(repository, encoder, jwtUtil)
+        authService = AuthService(repository, encoder, jwtUtil, CHAVE_MEDICO)
     }
 
     @Test
@@ -91,5 +92,82 @@ class AuthServiceTest {
         assertThrows(CredenciaisInvalidasException::class.java) {
             authService.login(LoginRequest(email = "naoexiste@email.com", senha = "qualquer123"))
         }
+    }
+
+    @Test
+    fun `deve autenticar login com senha correta`() {
+        val id = UUID.randomUUID()
+        every { repository.findByEmail("maria@email.com") } returns Usuario(
+            id = id,
+            nome = "Maria Silva",
+            email = "maria@email.com",
+            senhaHash = encoder.encode("senhaCorreta123"),
+            papel = Papel.GESTANTE
+        )
+        every { jwtUtil.gerarToken(id.toString(), any()) } returns "token-login"
+
+        val response = authService.login(LoginRequest(email = "maria@email.com", senha = "senhaCorreta123"))
+
+        assertEquals("token-login", response.token)
+        assertEquals(id.toString(), response.usuario.id)
+    }
+
+    /**
+     * Contrato com o api-gateway e o clinical-service: ambos leem a claim
+     * "papel" para autorizar rotas restritas (ex.: painel do MEDICO).
+     */
+    @Test
+    fun `deve emitir token com subject igual ao id e claims papel e email`() {
+        val request = CadastroRequest(nome = "Dr. João", email = "joao@email.com", senha = "senhaForte123", papel = Papel.MEDICO)
+        val id = UUID.randomUUID()
+        val claims = slot<Map<String, Any>>()
+        every { repository.existsByEmail(request.email) } returns false
+        every { repository.save(any()) } answers {
+            val u = firstArg<Usuario>()
+            Usuario(id = id, nome = u.nome, email = u.email, senhaHash = u.senhaHash, papel = u.papel)
+        }
+        every { jwtUtil.gerarToken(id.toString(), capture(claims)) } returns "token-medico"
+
+        val response = authService.registrar(request, CHAVE_MEDICO)
+
+        assertEquals(Papel.MEDICO, response.usuario.papel)
+        assertEquals("MEDICO", claims.captured["papel"])
+        assertEquals("joao@email.com", claims.captured["email"])
+    }
+
+    @Test
+    fun `deve resolver nomes em lote omitindo ids inexistentes`() {
+        val existente = UUID.randomUUID()
+        val inexistente = UUID.randomUUID()
+        every { repository.findAllById(listOf(existente, inexistente)) } returns listOf(
+            Usuario(id = existente, nome = "Maria Silva", email = "maria@email.com", senhaHash = "x", papel = Papel.GESTANTE)
+        )
+
+        val resumo = authService.buscarResumoPorIds(listOf(existente, inexistente))
+
+        assertEquals(1, resumo.size)
+        assertEquals(existente.toString(), resumo[0].id)
+        assertEquals("Maria Silva", resumo[0].nome)
+    }
+
+    @Test
+    fun `nao deve criar conta MEDICO sem a chave de cadastro`() {
+        val request = CadastroRequest(nome = "Falso Médico", email = "x@email.com", senha = "senhaForte123", papel = Papel.MEDICO)
+
+        assertThrows(CadastroMedicoNaoAutorizadoException::class.java) { authService.registrar(request, null) }
+        assertThrows(CadastroMedicoNaoAutorizadoException::class.java) { authService.registrar(request, "chave-errada") }
+        verify(exactly = 0) { repository.save(any()) }
+    }
+
+    @Test
+    fun `cadastro de MEDICO fica desabilitado quando a chave nao esta configurada`() {
+        val semChave = AuthService(repository, encoder, jwtUtil, "")
+        val request = CadastroRequest(nome = "Dr. João", email = "joao@email.com", senha = "senhaForte123", papel = Papel.MEDICO)
+
+        assertThrows(CadastroMedicoNaoAutorizadoException::class.java) { semChave.registrar(request, "") }
+    }
+
+    companion object {
+        const val CHAVE_MEDICO = "chave-medico-teste"
     }
 }

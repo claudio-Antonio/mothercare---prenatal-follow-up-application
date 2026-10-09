@@ -41,3 +41,13 @@ data class UsuarioResponse(
     val email: String,
     val papel: Papel
 )
+
+/** Usado pelo clinical-service pra resolver o nome da gestante no painel do médico. */
+data class LoteIdsRequest(
+    val ids: List<String>
+)
+
+data class UsuarioResumoResponse(
+    val id: String,
+    val nome: String
+)

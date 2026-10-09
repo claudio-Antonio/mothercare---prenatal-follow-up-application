@@ -17,11 +17,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import br.edu.ufmt.mothercare.app.data.repository.GestanteRepository
+import br.edu.ufmt.mothercare.app.ui.components.CampoData
 import br.edu.ufmt.mothercare.app.ui.components.ErrorBanner
 import br.edu.ufmt.mothercare.app.ui.components.GenericViewModelFactory
 import br.edu.ufmt.mothercare.app.ui.components.PrimaryButton
 import br.edu.ufmt.mothercare.app.ui.theme.BluePrimary
 import br.edu.ufmt.mothercare.app.ui.theme.MotherCareTheme
+import java.time.LocalDate
 
 @Composable
 fun CadastroGestanteScreen(
@@ -34,8 +36,11 @@ fun CadastroGestanteScreen(
     )
     val estado by viewModel.uiState.collectAsState()
 
-    LaunchedEffect(estado.concluido) {
-        if (estado.concluido && estado.gestanteId != null) aoCadastrar(estado.gestanteId!!)
+    LaunchedEffect(estado.gestanteIdCriada) {
+        estado.gestanteIdCriada?.let {
+            viewModel.navegacaoConsumida()
+            aoCadastrar(it)
+        }
     }
 
     CadastroGestanteScreenContent(
@@ -68,11 +73,12 @@ fun CadastroGestanteScreenContent(
         Text("Precisamos de alguns dados iniciais pra calcular sua idade gestacional.", style = MaterialTheme.typography.bodyMedium)
         Spacer(modifier = Modifier.height(32.dp))
 
-        OutlinedTextField(
-            value = estado.dum, onValueChange = onDumChange,
-            label = { Text("Data da última menstruação") },
-            placeholder = { Text("yyyy-MM-dd, ex: 2025-11-15") },
-            singleLine = true, modifier = Modifier.fillMaxWidth()
+        // DUM: não pode ser futura (@PastOrPresent no backend) nem anterior a ~44 semanas.
+        CampoData(
+            valorIso = estado.dum,
+            rotulo = "Data da última menstruação",
+            onDataSelecionada = onDumChange,
+            permitir = { data -> !data.isAfter(LocalDate.now()) && data.isAfter(LocalDate.now().minusWeeks(44)) }
         )
         Spacer(modifier = Modifier.height(12.dp))
         OutlinedTextField(

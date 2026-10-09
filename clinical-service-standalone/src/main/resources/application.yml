@@ -26,3 +26,5 @@ spring:
 mothercare:
   jwt:
     secret: ${MOTHERCARE_JWT_SECRET}
+  auth-service:
+    base-url: ${AUTH_SERVICE_URL:http://localhost:8081}

@@ -19,6 +19,11 @@ import org.springframework.context.annotation.Configuration
  * funcionaria. Em desenvolvimento local, essas propriedades apontam para
  * `localhost:<porta>`; no docker-compose, são sobrescritas para o nome
  * do serviço no Compose (resolvido pela rede interna do Docker).
+ *
+ * Do auth-service só são expostos cadastro e login. `/auth/usuarios/lote`
+ * é exclusivo da comunicação serviço-a-serviço (clinical → auth) e não
+ * pode ser alcançado pelo app — por isso a rota lista os caminhos
+ * explicitamente em vez de usar um curinga sobre /api/auth.
  */
 @Configuration
 class GatewayRoutesConfig(
@@ -31,14 +36,14 @@ class GatewayRoutesConfig(
     fun rotas(builder: RouteLocatorBuilder): RouteLocator =
         builder.routes()
             .route("auth-service") { r ->
-                r.path("/api/auth/**")
+                r.path("/api/auth/registrar", "/api/auth/login")
                     .filters { f -> f.rewritePath("/api/auth/(?<segment>.*)", "/auth/\${segment}") }
                     .uri(authServiceUri)
             }
             .route("clinical-service") { r ->
                 r.path(
                     "/api/gestantes/**", "/api/checkin/**", "/api/exames/**",
-                    "/api/peso/**", "/api/prontuario/**"
+                    "/api/peso/**", "/api/prontuario/**", "/api/notificacoes/**"
                 )
                     .filters { f -> f.rewritePath("/api/(?<segment>.*)", "/\${segment}") }
                     .uri(clinicalServiceUri)

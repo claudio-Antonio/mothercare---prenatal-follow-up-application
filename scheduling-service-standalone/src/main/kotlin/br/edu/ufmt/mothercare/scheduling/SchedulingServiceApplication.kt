@@ -2,6 +2,7 @@ package br.edu.ufmt.mothercare.scheduling
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.http.client.SimpleClientHttpRequestFactory
 import org.springframework.web.client.RestTemplate
 import org.springframework.context.annotation.Bean
 
@@ -12,8 +13,14 @@ import org.springframework.context.annotation.Bean
  */
 @SpringBootApplication
 class SchedulingServiceApplication {
+    /** Timeouts explícitos: sem eles, um serviço vizinho travado prende a thread até o gateway estourar. */
     @Bean
-    fun restTemplate(): RestTemplate = RestTemplate()
+    fun restTemplate(): RestTemplate = RestTemplate(
+        SimpleClientHttpRequestFactory().apply {
+            setConnectTimeout(2_000)
+            setReadTimeout(3_000)
+        }
+    )
 }
 
 fun main(args: Array<String>) {

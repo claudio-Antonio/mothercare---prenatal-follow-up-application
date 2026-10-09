@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:52:22.392Z" hostname="claudio-nery" time="0.416">
+  <properties/>
+  <testcase name="deve vincular medico a gestante sem medico()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.095"/>
+  <testcase name="deve retornar lista vazia quando medico nao tem gestantes vinculadas()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.019"/>
+  <testcase name="deve encontrar o cadastro clinico pelo usuario do token()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.003"/>
+  <testcase name="nao deve cadastrar duas vezes o mesmo usuario()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.005"/>
+  <testcase name="nao deve marcar alerta ativo se o exame mais recente do tipo normalizou()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.114"/>
+  <testcase name="deve responder nao encontrada quando o usuario ainda nao fez o cadastro clinico()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.003"/>
+  <testcase name="deve lancar excecao ao buscar gestante inexistente()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.002"/>
+  <testcase name="deve cadastrar gestante e devolver idade gestacional calculada()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.003"/>
+  <testcase name="deve listar gestantes do medico com nome resolvido pelo auth-service()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.005"/>
+  <testcase name="gestante corrige a DUM e a idade gestacional e recalculada()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.005"/>
+  <testcase name="nao deve trocar o medico de gestante ja vinculada a outro()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.004"/>
+  <testcase name="deve marcar alerta laboratorial ativo quando ultimo exame do tipo esta fora do padrao()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.005"/>
+  <testcase name="deve continuar funcionando sem nome quando auth-service falha()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.005"/>
+  <testcase name="gestante desvincula o medico atual()" classname="br.edu.ufmt.mothercare.clinical.service.GestanteServiceTest" time="0.007"/>
+  <system-out><![CDATA[2026-10-08T22:52:22.620-03:00  WARN 17197 --- [clinical-service] [    Test worker] b.e.u.m.c.service.GestanteService        : Falha ao buscar nomes no auth-service, painel do médico seguirá sem nome: no answer found for AuthServiceClient(#55).buscarNomes([], Bearer token-fake) among the configured answers: ()
+2026-10-08T22:52:22.799-03:00  WARN 17197 --- [clinical-service] [    Test worker] b.e.u.m.c.service.GestanteService        : Falha ao buscar nomes no auth-service, painel do médico seguirá sem nome: auth-service indisponível
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

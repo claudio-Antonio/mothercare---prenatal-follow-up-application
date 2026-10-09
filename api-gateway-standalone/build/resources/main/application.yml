@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: ${SERVER_PORT:8080}
 
 spring:
   application:
@@ -19,13 +19,10 @@ spring:
 
 mothercare:
   jwt:
-    secret: ${MOTHERCARE_JWT_SECRET:troque-esta-chave-em-producao-mothercare-2026-min-32-bytes}
+    secret: ${MOTHERCARE_JWT_SECRET}
   routes:
     auth-service: ${MOTHERCARE_ROUTE_AUTH:http://localhost:8081}
     clinical-service: ${MOTHERCARE_ROUTE_CLINICAL:http://localhost:8082}
     scheduling-service: ${MOTHERCARE_ROUTE_SCHEDULING:http://localhost:8083}
-# Em desenvolvimento local (fora do Docker), os defaults acima já
-# apontam para localhost nas portas de cada serviço. No docker-compose,
-# as variáveis MOTHERCARE_ROUTE_* são sobrescritas para o nome do
-# serviço no Compose (ex.: http://clinical-service:8082), resolvido
-# pela rede interna do Docker — não precisa de Eureka/Consul.
+# Fora do Docker, os defaults apontam para localhost. No Compose, o .env
+# preenche MOTHERCARE_ROUTE_* com os hostnames da rede interna.

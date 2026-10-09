@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.auth.security.JwtUtilTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-07T23:37:34.203Z" hostname="claudio-nery" time="0.013">
+  <properties/>
+  <testcase name="deve incluir subject e claims customizadas no token()" classname="br.edu.ufmt.mothercare.auth.security.JwtUtilTest" time="0.009"/>
+  <testcase name="deve respeitar a expiracao configurada em minutos()" classname="br.edu.ufmt.mothercare.auth.security.JwtUtilTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

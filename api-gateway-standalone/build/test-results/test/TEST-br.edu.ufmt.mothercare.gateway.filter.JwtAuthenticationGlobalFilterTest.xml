@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-03T11:47:13.890Z" hostname="claudio-nery" time="2.712">
+<testsuite name="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:51:08.474Z" hostname="claudio-nery" time="15.742">
   <properties/>
-  <testcase name="deve bloquear rota protegida sem cabecalho Authorization()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="1.319"/>
-  <testcase name="deve deixar passar rota publica de login sem token()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.048"/>
-  <testcase name="deve deixar passar rota publica de registro sem token()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.017"/>
-  <testcase name="deve bloquear cabecalho Authorization mal formatado (sem Bearer)()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.032"/>
-  <testcase name="deve bloquear rota protegida com token invalido()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.054"/>
-  <testcase name="deve deixar passar rota protegida com token valido e propagar X-Auth-User()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.016"/>
+  <testcase name="deve propagar X-Auth-User e X-Auth-Role para os microsservicos internos()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="11.659"/>
+  <testcase name="deve remover X-Auth-User e X-Auth-Role enviados pelo cliente em rota publica()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.093"/>
+  <testcase name="deve bloquear rota protegida sem cabecalho Authorization()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.41"/>
+  <testcase name="deve deixar passar rota publica de login sem token()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.049"/>
+  <testcase name="deve deixar passar rota publica de registro sem token()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.02"/>
+  <testcase name="nao deve tratar como publica uma rota que apenas comeca com o caminho de login()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.01"/>
+  <testcase name="deve bloquear cabecalho Authorization mal formatado (sem Bearer)()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.003"/>
+  <testcase name="deve bloquear rota protegida com token invalido()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.017"/>
+  <testcase name="deve sobrescrever X-Auth-User e X-Auth-Role forjados pelo cliente com os valores do token()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.057"/>
+  <testcase name="deve deixar passar rota protegida com token valido e propagar X-Auth-User()" classname="br.edu.ufmt.mothercare.gateway.filter.JwtAuthenticationGlobalFilterTest" time="0.023"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/claudio/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

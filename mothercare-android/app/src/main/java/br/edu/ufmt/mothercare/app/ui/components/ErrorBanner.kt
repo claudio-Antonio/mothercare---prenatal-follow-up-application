@@ -1,11 +1,13 @@
 package br.edu.ufmt.mothercare.app.ui.components
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -13,18 +15,23 @@ import androidx.compose.ui.unit.dp
 import br.edu.ufmt.mothercare.app.ui.theme.ErrorRed
 import br.edu.ufmt.mothercare.app.ui.theme.MotherCareTheme
 
+/** [aoTentarNovamente] != null mostra o botão "Tentar novamente" (telas que carregam dados). */
 @Composable
-fun ErrorBanner(mensagem: String) {
+fun ErrorBanner(mensagem: String, aoTentarNovamente: (() -> Unit)? = null) {
     Card(
         modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
         colors = CardDefaults.cardColors(containerColor = ErrorRed.copy(alpha = 0.1f))
     ) {
-        Text(
-            text = mensagem,
-            color = ErrorRed,
-            style = MaterialTheme.typography.bodyMedium,
-            modifier = Modifier.padding(16.dp)
-        )
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = mensagem,
+                color = ErrorRed,
+                style = MaterialTheme.typography.bodyMedium
+            )
+            if (aoTentarNovamente != null) {
+                TextButton(onClick = aoTentarNovamente) { Text("Tentar novamente") }
+            }
+        }
     }
 }
 
@@ -32,4 +39,10 @@ fun ErrorBanner(mensagem: String) {
 @Composable
 private fun ErrorBannerPreview() {
     MotherCareTheme { ErrorBanner("Credenciais inválidas. Verifique email e senha.") }
+}
+
+@Preview(showBackground = true, name = "ErrorBanner - com retry")
+@Composable
+private fun ErrorBannerRetryPreview() {
+    MotherCareTheme { ErrorBanner("O servidor está indisponível no momento.", aoTentarNovamente = {}) }
 }

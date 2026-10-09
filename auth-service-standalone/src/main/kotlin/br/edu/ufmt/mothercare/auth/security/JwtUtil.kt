@@ -16,11 +16,20 @@ import java.util.Date
 @Component
 class JwtUtil(
     @Value("\${mothercare.jwt.secret}") private val secret: String,
-    @Value("3600") private val expiracaoMinutos: Long
+    @Value("\${mothercare.jwt.expiracao-minutos:60}") private val expiracaoMinutos: Long
 ) {
     private val signingKey by lazy {
         Keys.hmacShaKeyFor(secret.toByteArray(StandardCharsets.UTF_8))
     }
+
+    /** Valida assinatura/expiração e devolve a claim "papel"; null se o token for inválido. */
+    fun extrairPapelValidado(token: String): String? =
+        try {
+            Jwts.parser().verifyWith(signingKey).build()
+                .parseSignedClaims(token).payload["papel"] as? String
+        } catch (ex: Exception) {
+            null
+        }
 
     fun gerarToken(subject: String, claims: Map<String, Any> = emptyMap()): String {
         val agora = Instant.now()

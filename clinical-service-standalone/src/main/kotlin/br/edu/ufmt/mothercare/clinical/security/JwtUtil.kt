@@ -6,13 +6,6 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import java.nio.charset.StandardCharsets
 
-/**
- * Valida tokens JWT emitidos pelo auth-service. Compartilha o mesmo
- * segredo (`mothercare.jwt.secret`) configurado no Gateway e no
- * auth-service — não há um servidor de autenticação centralizado
- * consultado a cada requisição (evita acoplamento síncrono extra
- * entre microsserviços).
- */
 @Component
 class JwtUtil(
     @Value("\${mothercare.jwt.secret}") private val secret: String
@@ -25,6 +18,15 @@ class JwtUtil(
         try {
             Jwts.parser().verifyWith(signingKey).build()
                 .parseSignedClaims(token).payload.subject
+        } catch (ex: Exception) {
+            null
+        }
+
+    /** Extrai a claim "papel" (GESTANTE|MEDICO) emitida pelo auth-service no login/cadastro. */
+    fun extrairPapel(token: String): String? =
+        try {
+            Jwts.parser().verifyWith(signingKey).build()
+                .parseSignedClaims(token).payload["papel"] as? String
         } catch (ex: Exception) {
             null
         }

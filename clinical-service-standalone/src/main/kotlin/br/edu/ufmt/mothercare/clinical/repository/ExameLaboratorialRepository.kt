@@ -6,4 +6,5 @@ import java.util.UUID
 
 interface ExameLaboratorialRepository : JpaRepository<ExameLaboratorial, UUID> {
     fun findByGestanteIdOrderByRegistradoEmDesc(gestanteId: UUID): List<ExameLaboratorial>
+    fun findByDocumentoId(documentoId: UUID): List<ExameLaboratorial>
 }

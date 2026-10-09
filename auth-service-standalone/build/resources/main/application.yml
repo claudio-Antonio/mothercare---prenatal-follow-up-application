@@ -1,13 +1,13 @@
 server:
-  port: 8081
+  port: ${SERVER_PORT:8081}
 
 spring:
   application:
     name: auth-service
   datasource:
-    url: jdbc:postgresql://localhost:5433/mothercare_auth
-    username: mothercare
-    password: mothercare
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/mothercare_auth}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
@@ -18,5 +18,9 @@ spring:
 
 mothercare:
   jwt:
-    secret: ${MOTHERCARE_JWT_SECRET:troque-esta-chave-em-producao-mothercare-2026-min-32-bytes}
-    expiracao-minutos: 60
+    secret: ${MOTHERCARE_JWT_SECRET}
+    expiracao-minutos: ${MOTHERCARE_JWT_EXPIRACAO_MINUTOS:60}
+  cadastro-medico:
+    # Contas MEDICO só são criadas com o header X-Chave-Cadastro-Medico igual a este valor.
+    # Vazio = cadastro de médico desabilitado.
+    chave: ${MOTHERCARE_CHAVE_CADASTRO_MEDICO:}

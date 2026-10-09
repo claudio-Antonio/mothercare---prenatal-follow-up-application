@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.scheduling.exception.GlobalExceptionHandlerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:47:14.526Z" hostname="claudio-nery" time="0.115">
+  <properties/>
+  <testcase name="404 do clinical-service deve chegar como 404 e nao 500()" classname="br.edu.ufmt.mothercare.scheduling.exception.GlobalExceptionHandlerTest" time="0.031"/>
+  <testcase name="os dois 409 devem ter codigos distintos para o app()" classname="br.edu.ufmt.mothercare.scheduling.exception.GlobalExceptionHandlerTest" time="0.002"/>
+  <testcase name="clinical-service fora do ar deve virar 503()" classname="br.edu.ufmt.mothercare.scheduling.exception.GlobalExceptionHandlerTest" time="0.006"/>
+  <system-out><![CDATA[22:47:14.637 [Test worker] WARN br.edu.ufmt.mothercare.scheduling.exception.GlobalExceptionHandler -- Falha ao consultar o clinical-service: Connection refused
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.NotificacaoServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:52:22.920Z" hostname="claudio-nery" time="0.14">
+  <properties/>
+  <testcase name="outro usuario nao consegue marcar a notificacao (404, sem revelar existencia)()" classname="br.edu.ufmt.mothercare.clinical.service.NotificacaoServiceTest" time="0.032"/>
+  <testcase name="destinatario marca a propria notificacao como lida()" classname="br.edu.ufmt.mothercare.clinical.service.NotificacaoServiceTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

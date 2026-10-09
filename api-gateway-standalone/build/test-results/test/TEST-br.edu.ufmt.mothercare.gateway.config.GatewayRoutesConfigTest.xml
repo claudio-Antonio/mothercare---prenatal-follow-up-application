@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:50:32.684Z" hostname="claudio-nery" time="35.772">
+  <properties/>
+  <testcase name="[1] method=POST, path=/api/auth/registrar, esperado=auth-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="18.088"/>
+  <testcase name="[2] method=POST, path=/api/auth/login, esperado=auth-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.041"/>
+  <testcase name="[3] method=POST, path=/api/gestantes, esperado=clinical-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.003"/>
+  <testcase name="[4] method=GET, path=/api/gestantes/medico/minhas-gestantes, esperado=clinical-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.003"/>
+  <testcase name="[5] method=POST, path=/api/checkin/pressao, esperado=clinical-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.003"/>
+  <testcase name="[6] method=POST, path=/api/exames, esperado=clinical-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.004"/>
+  <testcase name="[7] method=GET, path=/api/peso/123/grafico, esperado=clinical-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.003"/>
+  <testcase name="[8] method=GET, path=/api/prontuario/documentos/123, esperado=clinical-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.004"/>
+  <testcase name="[9] method=POST, path=/api/consultas, esperado=scheduling-service" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.003"/>
+  <testcase name="[1] method=POST, path=/api/auth/usuarios/lote" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.013"/>
+  <testcase name="[2] method=GET, path=/api/desconhecido" classname="br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest" time="0.004"/>
+  <system-out><![CDATA[22:50:32.835 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest]: GatewayRoutesConfigTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:50:32.937 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.edu.ufmt.mothercare.gateway.ApiGatewayApplication for test class br.edu.ufmt.mothercare.gateway.config.GatewayRoutesConfigTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-08T22:50:33.442-03:00  INFO 16715 --- [api-gateway] [    Test worker] b.e.u.m.g.c.GatewayRoutesConfigTest      : Starting GatewayRoutesConfigTest using Java 21.0.12.1 with PID 16715 (started by claudio in /home/claudio/Desktop/app/api-gateway-standalone)
+2026-10-08T22:50:33.444-03:00  INFO 16715 --- [api-gateway] [    Test worker] b.e.u.m.g.c.GatewayRoutesConfigTest      : No active profile set, falling back to 1 default profile: "default"
+2026-10-08T22:50:39.014-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=44157758-21d2-32d9-9344-8cfbc5a6c59d
+2026-10-08T22:50:48.878-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-10-08T22:50:48.879-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-10-08T22:50:48.880-03:00  INFO 16715 --- [api-gateway] [    Test worker] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-10-08T22:50:50.207-03:00  INFO 16715 --- [api-gateway] [    Test worker] b.e.u.m.g.c.GatewayRoutesConfigTest      : Started GatewayRoutesConfigTest in 16.99 seconds (process running for 18.261)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/claudio/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

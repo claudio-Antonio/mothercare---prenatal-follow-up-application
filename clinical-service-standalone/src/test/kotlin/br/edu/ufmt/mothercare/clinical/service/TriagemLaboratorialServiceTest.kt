@@ -3,6 +3,7 @@ package br.edu.ufmt.mothercare.clinical.service
 import br.edu.ufmt.mothercare.clinical.dto.ExameLaboratorialRequest
 import br.edu.ufmt.mothercare.clinical.entity.TipoExame
 import br.edu.ufmt.mothercare.clinical.repository.ExameLaboratorialRepository
+import br.edu.ufmt.mothercare.clinical.repository.GestanteRepository
 import br.edu.ufmt.mothercare.clinical.entity.ExameLaboratorial
 import io.mockk.every
 import io.mockk.mockk
@@ -10,13 +11,19 @@ import io.mockk.slot
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
+import java.util.Optional
 import java.util.UUID
 
 /** RN03 - Anemia: Hb < 11 g/dL. Diabetes Gestacional: Glicemia de jejum >= 92 mg/dL. */
 class TriagemLaboratorialServiceTest {
 
     private val repository = mockk<ExameLaboratorialRepository>()
-    private val service = TriagemLaboratorialService(repository)
+    private val gestanteRepository = mockk<GestanteRepository>()
+    private val service = TriagemLaboratorialService(repository, gestanteRepository, mockk(relaxed = true))
+
+    init {
+        every { gestanteRepository.findById(any()) } returns Optional.empty()
+    }
     private val gestanteId = UUID.randomUUID()
 
     private fun mockSave() {

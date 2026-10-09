@@ -24,6 +24,7 @@ import br.edu.ufmt.mothercare.app.ui.components.ErrorBanner
 import br.edu.ufmt.mothercare.app.ui.components.GenericViewModelFactory
 import br.edu.ufmt.mothercare.app.ui.components.LoadingIndicator
 import br.edu.ufmt.mothercare.app.ui.components.PrimaryButton
+import br.edu.ufmt.mothercare.app.ui.components.formatarDataApi
 import br.edu.ufmt.mothercare.app.ui.theme.BluePrimary
 import br.edu.ufmt.mothercare.app.ui.theme.MotherCareTheme
 import br.edu.ufmt.mothercare.app.ui.theme.WarningAmber
@@ -35,7 +36,8 @@ fun PesoScreen(gestanteId: String, pesoRepository: PesoRepository) {
     PesoScreenContent(
         estado = estado,
         onPesoInputChange = viewModel::onPesoInputChange,
-        onRegistrarClick = viewModel::registrarPeso
+        onRegistrarClick = viewModel::registrarPeso,
+        onRecarregarClick = viewModel::carregarGrafico
     )
 }
 
@@ -43,7 +45,8 @@ fun PesoScreen(gestanteId: String, pesoRepository: PesoRepository) {
 fun PesoScreenContent(
     estado: PesoUiState,
     onPesoInputChange: (String) -> Unit,
-    onRegistrarClick: () -> Unit
+    onRegistrarClick: () -> Unit,
+    onRecarregarClick: (() -> Unit)? = null
 ) {
     Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp)) {
         Text("Monitoramento de peso", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = BluePrimary)
@@ -66,6 +69,10 @@ fun PesoScreenContent(
 
         when {
             estado.carregandoGrafico -> LoadingIndicator()
+            estado.grafico == null && onRecarregarClick != null ->
+                TextButton(onClick = onRecarregarClick) { Text("Tentar carregar o histórico novamente") }
+            estado.grafico != null && estado.grafico.pontos.isEmpty() && !estado.grafico.alertaGanhoExcessivo ->
+                Text("Nenhum peso registrado ainda. Registre o primeiro acima.", style = MaterialTheme.typography.bodyMedium)
             estado.grafico != null -> {
                 val grafico = estado.grafico
 
@@ -90,7 +97,7 @@ fun PesoScreenContent(
 
                 grafico.pontos.reversed().forEach { ponto ->
                     Row(modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text(ponto.data, style = MaterialTheme.typography.bodyMedium)
+                        Text(formatarDataApi(ponto.data), style = MaterialTheme.typography.bodyMedium)
                         Text("${ponto.pesoKg} kg", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold)
                     }
                     HorizontalDivider()
@@ -101,7 +108,7 @@ fun PesoScreenContent(
 }
 
 @Composable
-private fun PesoLineChart(pontos: List<PontoGraficoPeso>, modifier: Modifier = Modifier) {
+internal fun PesoLineChart(pontos: List<PontoGraficoPeso>, modifier: Modifier = Modifier) {
     val corLinha = BluePrimary
     Canvas(modifier = modifier) {
         val pesos = pontos.map { it.pesoKg }

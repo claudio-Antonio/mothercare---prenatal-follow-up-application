@@ -1,13 +1,13 @@
 server:
-  port: 8083
+  port: ${SERVER_PORT:8083}
 
 spring:
   application:
     name: scheduling-service
   datasource:
-    url: jdbc:postgresql://localhost:5435/mothercare_scheduling
-    username: mothercare
-    password: mothercare
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5435/mothercare_scheduling}
+    username: ${SPRING_DATASOURCE_USERNAME:mothercare}
+    password: ${SPRING_DATASOURCE_PASSWORD:mothercare}
   jpa:
     hibernate:
       ddl-auto: update
@@ -18,6 +18,12 @@ spring:
 
 mothercare:
   jwt:
-    secret: ${MOTHERCARE_JWT_SECRET:troque-esta-chave-em-producao-mothercare-2026-min-32-bytes}
+    secret: ${MOTHERCARE_JWT_SECRET}
   clinical-service:
-    base-url: ${CLINICAL_SERVICE_URL:http://localhost:8082}
+    base-url: ${CLINICAL_SERVICE_URL}
+  # RF03: grade da agenda da clínica (dias úteis). Telefone usado no A1 do UC03.
+  agenda:
+    abertura: ${AGENDA_ABERTURA:08:00}
+    fechamento: ${AGENDA_FECHAMENTO:17:00}
+    duracao-minutos: ${AGENDA_DURACAO_MINUTOS:30}
+    telefone-clinica: ${TELEFONE_CLINICA:}

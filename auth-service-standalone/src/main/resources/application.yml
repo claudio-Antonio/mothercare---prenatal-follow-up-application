@@ -20,3 +20,7 @@ mothercare:
   jwt:
     secret: ${MOTHERCARE_JWT_SECRET}
     expiracao-minutos: ${MOTHERCARE_JWT_EXPIRACAO_MINUTOS:60}
+  cadastro-medico:
+    # Contas MEDICO só são criadas com o header X-Chave-Cadastro-Medico igual a este valor.
+    # Vazio = cadastro de médico desabilitado.
+    chave: ${MOTHERCARE_CHAVE_CADASTRO_MEDICO:}

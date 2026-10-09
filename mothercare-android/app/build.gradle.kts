@@ -17,6 +17,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true // BuildConfig.DEBUG controla o log HTTP
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.15"

@@ -14,18 +14,19 @@ class AuthRepository(
 ) {
     suspend fun registrar(nome: String, email: String, senha: String): Resultado<AuthResponse> {
         val resultado = chamarApi { api.registrar(CadastroRequest(nome, email, senha)) }
-        if (resultado is Resultado.Sucesso) {
-            sessionManager.salvarSessao(resultado.dados.token, resultado.dados.usuario.id, resultado.dados.usuario.nome)
-        }
+        if (resultado is Resultado.Sucesso) salvar(resultado.dados)
         return resultado
     }
 
     suspend fun login(email: String, senha: String): Resultado<AuthResponse> {
         val resultado = chamarApi { api.login(LoginRequest(email, senha)) }
-        if (resultado is Resultado.Sucesso) {
-            sessionManager.salvarSessao(resultado.dados.token, resultado.dados.usuario.id, resultado.dados.usuario.nome)
-        }
+        if (resultado is Resultado.Sucesso) salvar(resultado.dados)
         return resultado
+    }
+
+    private suspend fun salvar(resposta: AuthResponse) {
+        val usuario = resposta.usuario
+        sessionManager.salvarSessao(resposta.token, usuario.id, usuario.nome, usuario.papel.name)
     }
 
     suspend fun logout() {

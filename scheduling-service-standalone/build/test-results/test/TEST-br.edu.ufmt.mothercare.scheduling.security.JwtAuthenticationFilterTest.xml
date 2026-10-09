@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.scheduling.security.JwtAuthenticationFilterTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:47:14.647Z" hostname="claudio-nery" time="1.584">
+  <properties/>
+  <testcase name="nao deve autenticar com token assinado por outro segredo()" classname="br.edu.ufmt.mothercare.scheduling.security.JwtAuthenticationFilterTest" time="1.557"/>
+  <testcase name="deve propagar o papel do token como authority()" classname="br.edu.ufmt.mothercare.scheduling.security.JwtAuthenticationFilterTest" time="0.01"/>
+  <testcase name="deve autenticar com token valido()" classname="br.edu.ufmt.mothercare.scheduling.security.JwtAuthenticationFilterTest" time="0.004"/>
+  <testcase name="nao deve autenticar apenas com header X-Auth-User (pode ser forjado)()" classname="br.edu.ufmt.mothercare.scheduling.security.JwtAuthenticationFilterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/claudio/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

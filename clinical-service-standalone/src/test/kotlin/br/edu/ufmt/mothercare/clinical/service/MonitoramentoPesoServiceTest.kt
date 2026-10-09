@@ -16,7 +16,7 @@ class MonitoramentoPesoServiceTest {
 
     private val repository = mockk<RegistroPesoRepository>()
     private val calculadora = CalculadoraGestacionalService()
-    private val service = MonitoramentoPesoService(repository, calculadora)
+    private val service = MonitoramentoPesoService(repository, calculadora, mockk(relaxed = true))
 
     private fun gestanteComSemanasNoRegistro(semanasNoUltimoRegistro: Long): Gestante {
         // DUM ajustada para que "hoje" caia exatamente na semana desejada.

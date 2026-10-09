@@ -3,14 +3,18 @@ package br.edu.ufmt.mothercare.app.ui.prontuario
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -19,16 +23,22 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import br.edu.ufmt.mothercare.app.data.remote.dto.DocumentoClinicoResponse
 import br.edu.ufmt.mothercare.app.data.repository.ProntuarioRepository
+import br.edu.ufmt.mothercare.app.data.repository.TIPOS_DOCUMENTO_ACEITOS
 import br.edu.ufmt.mothercare.app.ui.components.ErrorBanner
 import br.edu.ufmt.mothercare.app.ui.components.GenericViewModelFactory
 import br.edu.ufmt.mothercare.app.ui.components.LoadingIndicator
+import br.edu.ufmt.mothercare.app.ui.components.formatarDataApi
 import br.edu.ufmt.mothercare.app.ui.theme.BluePrimary
 import br.edu.ufmt.mothercare.app.ui.theme.MotherCareTheme
 import br.edu.ufmt.mothercare.app.ui.theme.SuccessGreen
-import java.io.File
 
 @Composable
-fun ProntuarioScreen(gestanteId: String, prontuarioRepository: ProntuarioRepository) {
+fun ProntuarioScreen(
+    gestanteId: String,
+    prontuarioRepository: ProntuarioRepository,
+    /** Vindo do checklist: já preenche a categoria com o nome do exame e abre o seletor. */
+    categoriaInicial: String? = null
+) {
     val viewModel: ProntuarioViewModel = viewModel(
         factory = GenericViewModelFactory { ProntuarioViewModel(gestanteId, prontuarioRepository) }
     )
@@ -36,18 +46,49 @@ fun ProntuarioScreen(gestanteId: String, prontuarioRepository: ProntuarioReposit
     val context = LocalContext.current
 
     var mostrarDialogoEnvio by remember { mutableStateOf(false) }
-    var categoriaInput by remember { mutableStateOf("") }
+    var categoriaInput by remember { mutableStateOf(categoriaInicial.orEmpty()) }
     var uriSelecionada by remember { mutableStateOf<Uri?>(null) }
+    var seletorAutomaticoAberto by rememberSaveable { mutableStateOf(false) }
+    var documentoParaExcluir by remember { mutableStateOf<DocumentoClinicoResponse?>(null) }
 
-    val seletorArquivo = rememberLauncherForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+    // OpenDocument filtra no próprio seletor os tipos aceitos pelo backend (PDF/JPEG/PNG).
+    val seletorArquivo = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         uriSelecionada = uri
         if (uri != null) mostrarDialogoEnvio = true
     }
 
+    LaunchedEffect(categoriaInicial) {
+        if (!categoriaInicial.isNullOrBlank() && !seletorAutomaticoAberto) {
+            seletorAutomaticoAberto = true
+            seletorArquivo.launch(TIPOS_DOCUMENTO_ACEITOS)
+        }
+    }
+
+    LaunchedEffect(estado.arquivoParaAbrir) {
+        val abrir = estado.arquivoParaAbrir ?: return@LaunchedEffect
+        viewModel.arquivoAberto()
+        if (!abrirArquivoExterno(context, abrir)) viewModel.informarErro("Nenhum aplicativo instalado para abrir este arquivo.")
+    }
+
     ProntuarioScreenContent(
         estado = estado,
-        onNovoDocumentoClick = { seletorArquivo.launch("*/*") }
+        onNovoDocumentoClick = { seletorArquivo.launch(TIPOS_DOCUMENTO_ACEITOS) },
+        onDocumentoClick = viewModel::abrirDocumento,
+        onExcluirClick = { documentoParaExcluir = it },
+        onTentarNovamente = viewModel::carregarLista
     )
+
+    documentoParaExcluir?.let { documento ->
+        AlertDialog(
+            onDismissRequest = { documentoParaExcluir = null },
+            title = { Text("Excluir documento?") },
+            text = { Text("\"${documento.nomeArquivoOriginal}\" será removido do prontuário. Esta ação não pode ser desfeita.") },
+            confirmButton = {
+                TextButton(onClick = { viewModel.excluir(documento); documentoParaExcluir = null }) { Text("Excluir") }
+            },
+            dismissButton = { TextButton(onClick = { documentoParaExcluir = null }) { Text("Cancelar") } }
+        )
+    }
 
     if (mostrarDialogoEnvio && uriSelecionada != null) {
         AlertDialog(
@@ -64,15 +105,9 @@ fun ProntuarioScreen(gestanteId: String, prontuarioRepository: ProntuarioReposit
             confirmButton = {
                 TextButton(onClick = {
                     val uri = uriSelecionada ?: return@TextButton
-                    val mimeType = context.contentResolver.getType(uri) ?: "application/octet-stream"
-                    val extensao = if (mimeType.contains("pdf")) "pdf" else "jpg"
-                    val arquivoTemp = File(context.cacheDir, "upload_${System.currentTimeMillis()}.$extensao")
-                    context.contentResolver.openInputStream(uri)?.use { entrada ->
-                        arquivoTemp.outputStream().use { saida -> entrada.copyTo(saida) }
-                    }
-                    viewModel.enviarDocumento(categoriaInput, arquivoTemp, mimeType)
+                    viewModel.enviarDocumento(categoriaInput, uri)
                     mostrarDialogoEnvio = false
-                    categoriaInput = ""
+                    categoriaInput = categoriaInicial.orEmpty()
                 }) { Text("Enviar") }
             },
             dismissButton = {
@@ -85,7 +120,10 @@ fun ProntuarioScreen(gestanteId: String, prontuarioRepository: ProntuarioReposit
 @Composable
 fun ProntuarioScreenContent(
     estado: ProntuarioUiState,
-    onNovoDocumentoClick: () -> Unit
+    onNovoDocumentoClick: () -> Unit,
+    onDocumentoClick: (DocumentoClinicoResponse) -> Unit = {},
+    onExcluirClick: ((DocumentoClinicoResponse) -> Unit)? = null,
+    onTentarNovamente: (() -> Unit)? = null
 ) {
     Scaffold(
         floatingActionButton = {
@@ -97,7 +135,7 @@ fun ProntuarioScreenContent(
         Column(modifier = Modifier.fillMaxSize().padding(padding).padding(20.dp)) {
             Text("Prontuário digital", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = BluePrimary)
             Spacer(modifier = Modifier.height(8.dp))
-            Text("Laudos e exames enviados, do mais recente pro mais antigo.", style = MaterialTheme.typography.bodyMedium)
+            Text("Laudos e exames enviados, do mais recente pro mais antigo. Toque para abrir.", style = MaterialTheme.typography.bodyMedium)
             Spacer(modifier = Modifier.height(16.dp))
 
             estado.mensagemSucesso?.let {
@@ -106,7 +144,7 @@ fun ProntuarioScreenContent(
                 }
                 Spacer(modifier = Modifier.height(12.dp))
             }
-            estado.erro?.let { ErrorBanner(it) }
+            estado.erro?.let { ErrorBanner(it, onTentarNovamente.takeIf { estado.documentos.isEmpty() }) }
             if (estado.enviando) {
                 Spacer(modifier = Modifier.height(8.dp))
                 LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
@@ -116,7 +154,12 @@ fun ProntuarioScreenContent(
                 estado.carregandoLista -> LoadingIndicator()
                 estado.documentos.isEmpty() -> Text("Nenhum documento enviado ainda.", style = MaterialTheme.typography.bodyMedium)
                 else -> LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    items(estado.documentos) { doc -> DocumentoItem(doc) }
+                    items(estado.documentos) { doc ->
+                        DocumentoItem(
+                            doc, baixando = estado.baixandoId == doc.id, onClick = { onDocumentoClick(doc) },
+                            onExcluir = onExcluirClick?.let { excluir -> { excluir(doc) } }
+                        )
+                    }
                 }
             }
         }
@@ -124,18 +167,28 @@ fun ProntuarioScreenContent(
 }
 
 @Composable
-private fun DocumentoItem(documento: DocumentoClinicoResponse) {
-    Card(modifier = Modifier.fillMaxWidth()) {
-        Row(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+internal fun DocumentoItem(
+    documento: DocumentoClinicoResponse,
+    baixando: Boolean,
+    onClick: () -> Unit,
+    onExcluir: (() -> Unit)? = null
+) {
+    Card(modifier = Modifier.fillMaxWidth().clickable(enabled = !baixando, onClick = onClick)) {
+        Row(modifier = Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
             Icon(Icons.Filled.Description, contentDescription = null, tint = BluePrimary)
             Spacer(modifier = Modifier.width(12.dp))
-            Column {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(documento.categoria, fontWeight = FontWeight.SemiBold)
                 Text(documento.nomeArquivoOriginal, style = MaterialTheme.typography.bodyMedium)
                 Text(
-                    "${documento.tipoConteudo} · ${documento.tamanhoBytes / 1024} KB · ${documento.enviadoEm.take(10)}",
+                    "${documento.tipoConteudo} · ${documento.tamanhoBytes / 1024} KB · ${formatarDataApi(documento.enviadoEm)}",
                     style = MaterialTheme.typography.labelLarge
                 )
+            }
+            if (baixando) {
+                CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
+            } else if (onExcluir != null) {
+                IconButton(onClick = onExcluir) { Icon(Icons.Filled.Delete, contentDescription = "Excluir documento") }
             }
         }
     }

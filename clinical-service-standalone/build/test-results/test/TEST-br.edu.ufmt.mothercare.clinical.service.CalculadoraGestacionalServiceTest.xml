@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-02T01:02:18.237Z" hostname="claudio-nery" time="0.039">
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:52:21.918Z" hostname="claudio-nery" time="0.075">
   <properties/>
-  <testcase name="deve calcular DPP para DUM entre abril e dezembro (regra do README)()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.015"/>
+  <testcase name="deve calcular DPP para DUM entre abril e dezembro (regra do README)()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.0"/>
   <testcase name="deve calcular DPP para DUM entre janeiro e marco (regra do README)()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.001"/>
-  <testcase name="deve rejeitar DUM posterior a data de referencia()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.006"/>
-  <testcase name="deve calcular IG conforme exemplo do documento de regras (corrigindo 1 dia de arredondamento)()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.001"/>
+  <testcase name="[1] semanas=0, esperado=PRIMEIRO" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.013"/>
+  <testcase name="[2] semanas=13, esperado=PRIMEIRO" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.0"/>
+  <testcase name="[3] semanas=14, esperado=SEGUNDO" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.0"/>
+  <testcase name="[4] semanas=27, esperado=SEGUNDO" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.001"/>
+  <testcase name="[5] semanas=28, esperado=TERCEIRO" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.001"/>
+  <testcase name="[6] semanas=41, esperado=TERCEIRO" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.001"/>
+  <testcase name="deve rejeitar DUM posterior a data de referencia()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.001"/>
+  <testcase name="deve gerar resposta completa com DPP, trimestre e IMC inicial()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.0"/>
+  <testcase name="deve calcular IG conforme exemplo do documento de regras (corrigindo 1 dia de arredondamento)()" classname="br.edu.ufmt.mothercare.clinical.service.CalculadoraGestacionalServiceTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

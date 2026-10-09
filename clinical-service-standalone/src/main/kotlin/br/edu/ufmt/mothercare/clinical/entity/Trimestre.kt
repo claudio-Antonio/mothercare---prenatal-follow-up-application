@@ -4,10 +4,10 @@ package br.edu.ufmt.mothercare.clinical.entity
  * Trimestres gestacionais conforme Documento de Regras de Negócio:
  * 1º até a 13ª semana; 2º da 14ª à 27ª; 3º da 28ª semana até o parto.
  */
-enum class Trimestre {
-    PRIMEIRO,
-    SEGUNDO,
-    TERCEIRO;
+enum class Trimestre(val semanaInicial: Int) {
+    PRIMEIRO(0),
+    SEGUNDO(14),
+    TERCEIRO(28);
 
     companion object {
         fun apartirDaSemana(semanas: Int): Trimestre = when {

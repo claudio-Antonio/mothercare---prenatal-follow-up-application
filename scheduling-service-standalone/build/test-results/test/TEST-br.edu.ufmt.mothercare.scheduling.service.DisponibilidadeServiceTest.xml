@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.scheduling.service.DisponibilidadeServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:47:17.153Z" hostname="claudio-nery" time="0.019">
+  <properties/>
+  <testcase name="lista todos os horarios da grade quando o dia esta livre()" classname="br.edu.ufmt.mothercare.scheduling.service.DisponibilidadeServiceTest" time="0.003"/>
+  <testcase name="remove os horarios ja ocupados por consultas agendadas()" classname="br.edu.ufmt.mothercare.scheduling.service.DisponibilidadeServiceTest" time="0.003"/>
+  <testcase name="fim de semana nao tem horarios e orienta o contato telefonico (UC03 A1)()" classname="br.edu.ufmt.mothercare.scheduling.service.DisponibilidadeServiceTest" time="0.002"/>
+  <testcase name="horario ocupado ou fora da grade e recusado()" classname="br.edu.ufmt.mothercare.scheduling.service.DisponibilidadeServiceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

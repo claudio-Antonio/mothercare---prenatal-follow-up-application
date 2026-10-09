@@ -28,7 +28,7 @@ class Consulta(
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    val status: StatusConsulta = StatusConsulta.AGENDADA,
+    var status: StatusConsulta = StatusConsulta.AGENDADA,
 
     @Column(nullable = false)
     val semanaGestacionalNoAgendamento: Int,

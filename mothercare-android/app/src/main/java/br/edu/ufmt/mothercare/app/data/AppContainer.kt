@@ -15,12 +15,14 @@ class AppContainer(context: Context) {
     private val schedulingApi = retrofit.create(SchedulingApi::class.java)
 
     val authRepository = AuthRepository(authApi, sessionManager)
-    val gestanteRepository = GestanteRepository(clinicalApi)
+    val gestanteRepository = GestanteRepository(clinicalApi, sessionManager)
     val checklistRepository = ChecklistRepository(clinicalApi)
     val checkInRepository = CheckInRepository(clinicalApi)
     val agendamentoRepository = AgendamentoRepository(schedulingApi)
-
     val pesoRepository = PesoRepository(clinicalApi)
     val exameRepository = ExameRepository(clinicalApi)
-    val prontuarioRepository = ProntuarioRepository(clinicalApi)
+    val prontuarioRepository = ProntuarioRepository(clinicalApi, context.contentResolver, context.cacheDir)
+
+    // Painel do médico
+    val medicoRepository = MedicoRepository(clinicalApi)
 }

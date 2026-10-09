@@ -17,3 +17,12 @@ data class ExameLaboratorialResponse(
     val alertaDisparado: Boolean,
     val mensagem: String
 )
+
+data class ExameHistoricoResponse(
+    val id: String,
+    val tipo: TipoExame,
+    val valor: Double,
+    val alertaDisparado: Boolean,
+    val documentoId: String?,
+    val registradoEm: String // Instant ISO (UTC)
+)

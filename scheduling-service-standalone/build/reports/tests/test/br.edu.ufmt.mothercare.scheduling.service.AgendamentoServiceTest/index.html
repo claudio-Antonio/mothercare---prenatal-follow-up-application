@@ -28,9 +28,6 @@
 <li>
 <a class="" href="#">summary</a>
 </li>
-<li>
-<a class="" href="#">error output</a>
-</li>
 </ul>
 <div class="tab">
 <h2>summary</h2>
@@ -44,7 +41,7 @@
 <tr>
 <td>
 <div class="infoBox">
-<div class="counter">6</div>
+<div class="counter">15</div>
 <p>tests</p>
 </div>
 </td>
@@ -62,7 +59,7 @@
 </td>
 <td>
 <div class="infoBox duration">
-<div class="counter">3.481s</div>
+<div class="counter">0.912s</div>
 <p>duration</p>
 </div>
 </td>
@@ -98,7 +95,7 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td data-sort-value="6">0.006s</td>
+<td data-sort-value="11">0.011s</td>
 <td class="success" data-sort-value="100">100%</td>
 </tr>
 <tr>
@@ -107,16 +104,25 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td data-sort-value="1134">1.134s</td>
+<td data-sort-value="330">0.330s</td>
 <td class="success" data-sort-value="100">100%</td>
 </tr>
 <tr>
-<td class="success">deve bloquear agendamento quando ultimo check-in de PA indicou risco (RF05)()</td>
-<td class="path" hidden="">deve bloquear agendamento quando ultimo check-in de PA indicou risco (RF05)()</td>
+<td class="success">deve bloquear agendamento quando a PA informada no check-in e critica (RF05)()</td>
+<td class="path" hidden="">deve bloquear agendamento quando a PA informada no check-in e critica (RF05)()</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td data-sort-value="38">0.038s</td>
+<td data-sort-value="8">0.008s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">deve cancelar consulta agendada()</td>
+<td class="path" hidden="">deve cancelar consulta agendada()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="7">0.007s</td>
 <td class="success" data-sort-value="100">100%</td>
 </tr>
 <tr>
@@ -125,16 +131,25 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td data-sort-value="24">0.024s</td>
+<td data-sort-value="7">0.007s</td>
 <td class="success" data-sort-value="100">100%</td>
 </tr>
 <tr>
-<td class="success">deve permitir agendamento quando ultimo check-in de PA esta normal()</td>
-<td class="path" hidden="">deve permitir agendamento quando ultimo check-in de PA esta normal()</td>
+<td class="success">deve recusar horario ocupado ou fora da agenda da clinica (RF03, UC03 A1)()</td>
+<td class="path" hidden="">deve recusar horario ocupado ou fora da agenda da clinica (RF03, UC03 A1)()</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td data-sort-value="22">0.022s</td>
+<td data-sort-value="45">0.045s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">deve registrar o check-in de PA com o token da gestante antes de agendar (UC04, RF04)()</td>
+<td class="path" hidden="">deve registrar o check-in de PA com o token da gestante antes de agendar (UC04, RF04)()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="7">0.007s</td>
 <td class="success" data-sort-value="100">100%</td>
 </tr>
 <tr>
@@ -143,23 +158,75 @@
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td data-sort-value="14">0.014s</td>
+<td data-sort-value="5">0.005s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">deve repassar o Authorization original ao clinical-service()</td>
+<td class="path" hidden="">deve repassar o Authorization original ao clinical-service()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="8">0.008s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">lembrete fica ativo quando o intervalo recomendado esta expirando (secao 8_3)()</td>
+<td class="path" hidden="">lembrete fica ativo quando o intervalo recomendado esta expirando (secao 8_3)()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="8">0.008s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">lembrete fica inativo quando ja ha consulta futura agendada()</td>
+<td class="path" hidden="">lembrete fica inativo quando ja ha consulta futura agendada()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="3">0.003s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">lembrete sem consultas nao gera aviso()</td>
+<td class="path" hidden="">lembrete sem consultas nao gera aviso()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="164">0.164s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">listar valida o acesso no clinical-service antes de devolver as consultas()</td>
+<td class="path" hidden="">listar valida o acesso no clinical-service antes de devolver as consultas()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="10">0.010s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">nao deve agendar apos a DPP (secao 8_2, item 6)()</td>
+<td class="path" hidden="">nao deve agendar apos a DPP (secao 8_2, item 6)()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="9">0.009s</td>
+<td class="success" data-sort-value="100">100%</td>
+</tr>
+<tr>
+<td class="success">nao deve cancelar consulta ja cancelada()</td>
+<td class="path" hidden="">nao deve cancelar consulta ja cancelada()</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td data-sort-value="55">0.055s</td>
 <td class="success" data-sort-value="100">100%</td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-<div class="tab">
-<h2>error output</h2>
-<span class="code">
-<pre id="root-0-test-stderr-br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest">WARNING: A Java agent has been loaded dynamically (/home/claudio/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
-</pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stderr-br.edu.ufmt.mothercare.scheduling.service.AgendamentoServiceTest">Copy</button>
-</span>
 </div>
 </div>
 </div>
@@ -171,7 +238,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.6.0</a> at Sep 1, 2026, 10:04:51 PM</p>
+<a href="https://www.gradle.org">Gradle 9.6.0</a> at Oct 8, 2026, 10:47:17 PM</p>
 </div>
 </div>
 </body>

@@ -23,8 +23,8 @@ class ChecklistViewModel(
     private val _uiState = MutableStateFlow(ChecklistUiState())
     val uiState: StateFlow<ChecklistUiState> = _uiState.asStateFlow()
 
-    init { carregar() }
-
+    // Sem init { carregar() }: a tela recarrega toda vez que a aba é aberta, para
+    // refletir exames registrados em outra tela (o ViewModel fica retido na Home).
     fun carregar() {
         _uiState.value = _uiState.value.copy(carregando = true, erro = null)
         viewModelScope.launch {

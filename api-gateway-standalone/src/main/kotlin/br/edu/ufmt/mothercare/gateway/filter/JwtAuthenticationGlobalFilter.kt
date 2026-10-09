@@ -9,23 +9,12 @@ import org.springframework.stereotype.Component
 import org.springframework.web.server.ServerWebExchange
 import reactor.core.publisher.Mono
 
-/**
- * Filtro global de segurança do API Gateway (Spring Cloud Gateway).
- *
- * Intercepta toda requisição recebida do app móvel e valida o cabeçalho
- * `Authorization: Bearer <token>` antes de encaminhar o tráfego para os
- * microsserviços internos, conforme a Seção 4.2.2 do TCC ("validar
- * tokens de segurança (JWT) e efetuar o roteamento de rede").
- *
- * Rotas públicas (cadastro e login) são explicitamente ignoradas — faz
- * sentido, já que é ali que o token nasce.
- */
 @Component
 class JwtAuthenticationGlobalFilter(
     private val jwtValidator: JwtValidator
 ) : GlobalFilter, Ordered {
 
-    private val rotasPublicas = listOf(
+    private val rotasPublicas = setOf(
         "/api/auth/registrar",
         "/api/auth/login"
     )
@@ -33,8 +22,15 @@ class JwtAuthenticationGlobalFilter(
     override fun filter(exchange: ServerWebExchange, chain: GatewayFilterChain): Mono<Void> {
         val path = exchange.request.uri.path
 
-        if (rotasPublicas.any { path.startsWith(it) }) {
-            return chain.filter(exchange)
+        // Comparação exata: um prefixo (startsWith) deixaria passar sem
+        // token qualquer caminho como "/api/auth/login-qualquer-coisa".
+        if (path in rotasPublicas) {
+            // A identidade só pode vir do token validado aqui — nunca de
+            // headers X-Auth-* enviados pelo próprio cliente.
+            val requestSemIdentidade = exchange.request.mutate()
+                .headers { it.remove("X-Auth-User"); it.remove("X-Auth-Role") }
+                .build()
+            return chain.filter(exchange.mutate().request(requestSemIdentidade).build())
         }
 
         val authHeader = exchange.request.headers.getFirst("Authorization")
@@ -47,12 +43,14 @@ class JwtAuthenticationGlobalFilter(
             return unauthorized(exchange, "Token JWT inválido ou expirado")
         }
 
-        // Propaga a identidade do usuário para os microsserviços internos,
-        // evitando que cada serviço precise revalidar o token sozinho
-        // (embora cada um também valide — defesa em profundidade).
         val subject = jwtValidator.extractSubject(token) ?: ""
+        val papel = jwtValidator.extractRole(token) ?: ""
+        // headers.set (e não add) sobrescreve qualquer X-Auth-* forjado pelo cliente.
         val mutatedRequest = exchange.request.mutate()
-            .header("X-Auth-User", subject)
+            .headers {
+                it.set("X-Auth-User", subject)
+                it.set("X-Auth-Role", papel)
+            }
             .build()
 
         return chain.filter(exchange.mutate().request(mutatedRequest).build())

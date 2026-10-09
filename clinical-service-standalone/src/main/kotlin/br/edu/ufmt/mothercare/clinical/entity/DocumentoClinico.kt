@@ -47,6 +47,14 @@ class DocumentoClinico(
     @Column(nullable = false)
     val tipoConteudo: TipoConteudoArquivo,
 
+    /**
+     * Content-Type original do upload (ex.: image/png). [tipoConteudo] agrupa
+     * PNG e JPEG como IMAGEM, então não basta para servir o download.
+     * Nullable apenas para registros gravados antes desta coluna existir.
+     */
+    @Column
+    val mimeType: String? = null,
+
     @Column(nullable = false)
     val tamanhoBytes: Long,
 
@@ -56,4 +64,9 @@ class DocumentoClinico(
 
     @Column(nullable = false)
     val enviadoEm: Instant = Instant.now()
-)
+) {
+    fun mimeTypeDownload(): String = mimeType ?: when (tipoConteudo) {
+        TipoConteudoArquivo.PDF -> "application/pdf"
+        TipoConteudoArquivo.IMAGEM -> "image/jpeg"
+    }
+}

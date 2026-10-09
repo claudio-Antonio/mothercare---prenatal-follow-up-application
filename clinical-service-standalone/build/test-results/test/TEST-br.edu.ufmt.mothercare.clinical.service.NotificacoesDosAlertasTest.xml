@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.service.NotificacoesDosAlertasTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:52:23.061Z" hostname="claudio-nery" time="0.16">
+  <properties/>
+  <testcase name="glicemia de 92 dispara diabetes gestacional para gestante e medico (limiar inclusivo)()" classname="br.edu.ufmt.mothercare.clinical.service.NotificacoesDosAlertasTest" time="0.065"/>
+  <testcase name="anemia notifica gestante e medico (RN03, RF08)()" classname="br.edu.ufmt.mothercare.clinical.service.NotificacoesDosAlertasTest" time="0.004"/>
+  <testcase name="hemoglobina de 11,0 e normal e nao notifica ninguem (limiar exclusivo)()" classname="br.edu.ufmt.mothercare.clinical.service.NotificacoesDosAlertasTest" time="0.005"/>
+  <testcase name="pressao critica notifica a gestante (secao 8_4)()" classname="br.edu.ufmt.mothercare.clinical.service.NotificacoesDosAlertasTest" time="0.081"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

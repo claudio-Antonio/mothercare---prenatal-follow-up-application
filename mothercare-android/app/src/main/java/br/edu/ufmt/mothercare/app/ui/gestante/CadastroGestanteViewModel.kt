@@ -15,8 +15,8 @@ data class CadastroGestanteUiState(
     val altura: String = "",
     val carregando: Boolean = false,
     val erro: String? = null,
-    val gestanteId: String? = null,
-    val concluido: Boolean = false
+    /** Evento de navegação (consumido): id do cadastro clínico recém-criado. */
+    val gestanteIdCriada: String? = null
 )
 
 class CadastroGestanteViewModel(
@@ -30,6 +30,8 @@ class CadastroGestanteViewModel(
     fun onPesoChange(valor: String) { _uiState.value = _uiState.value.copy(peso = valor) }
     fun onAlturaChange(valor: String) { _uiState.value = _uiState.value.copy(altura = valor) }
 
+    fun navegacaoConsumida() { _uiState.value = _uiState.value.copy(gestanteIdCriada = null) }
+
     fun cadastrar() {
         val peso = _uiState.value.peso.replace(",", ".").toDoubleOrNull()
         val altura = _uiState.value.altura.replace(",", ".").toDoubleOrNull()
@@ -37,11 +39,15 @@ class CadastroGestanteViewModel(
             _uiState.value = _uiState.value.copy(erro = "Preencha DUM, peso e altura corretamente.")
             return
         }
+        if (altura > 3.0) {
+            _uiState.value = _uiState.value.copy(erro = "Informe a altura em metros (ex: 1.65).")
+            return
+        }
         _uiState.value = _uiState.value.copy(carregando = true, erro = null)
         viewModelScope.launch {
             val resultado = repository.cadastrar(usuarioId, _uiState.value.dum.trim(), peso, altura)
             _uiState.value = when (resultado) {
-                is Resultado.Sucesso -> _uiState.value.copy(carregando = false, gestanteId = resultado.dados.gestanteId, concluido = true)
+                is Resultado.Sucesso -> _uiState.value.copy(carregando = false, gestanteIdCriada = resultado.dados.gestanteId)
                 is Resultado.Erro -> _uiState.value.copy(carregando = false, erro = resultado.mensagem)
             }
         }

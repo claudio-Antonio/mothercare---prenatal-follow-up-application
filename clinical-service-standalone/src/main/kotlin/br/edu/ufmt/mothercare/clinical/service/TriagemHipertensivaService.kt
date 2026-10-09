@@ -1,10 +1,13 @@
 package br.edu.ufmt.mothercare.clinical.service
 
 import br.edu.ufmt.mothercare.clinical.dto.CheckInPressaoRequest
+import br.edu.ufmt.mothercare.clinical.dto.RegistroPressaoResponse
 import br.edu.ufmt.mothercare.clinical.dto.ResultadoTriagemPressaoResponse
 import br.edu.ufmt.mothercare.clinical.dto.UltimoStatusPressaoResponse
 import br.edu.ufmt.mothercare.clinical.entity.NivelRisco
 import br.edu.ufmt.mothercare.clinical.entity.RegistroPressaoArterial
+import br.edu.ufmt.mothercare.clinical.entity.TipoNotificacao
+import br.edu.ufmt.mothercare.clinical.repository.GestanteRepository
 import br.edu.ufmt.mothercare.clinical.repository.RegistroPressaoArterialRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -22,7 +25,9 @@ import java.util.UUID
  */
 @Service
 class TriagemHipertensivaService(
-    private val repository: RegistroPressaoArterialRepository
+    private val repository: RegistroPressaoArterialRepository,
+    private val gestanteRepository: GestanteRepository,
+    private val notificacaoService: NotificacaoService
 ) {
     companion object {
         const val LIMIAR_SISTOLICA = 140
@@ -43,6 +48,15 @@ class TriagemHipertensivaService(
         )
 
         return if (risco == NivelRisco.CRITICO) {
+            // Seção 8.4: PA crítica notifica a gestante (tela de alerta + orientação de atendimento imediato).
+            gestanteRepository.findById(request.gestanteId).ifPresent {
+                notificacaoService.notificarGestante(
+                    it,
+                    TipoNotificacao.PRESSAO_CRITICA,
+                    "Sua pressão foi ${request.sistolica}/${request.diastolica} mmHg, acima de 140/90. " +
+                        "Procure atendimento hospitalar imediato. O agendamento eletivo está bloqueado."
+                )
+            }
             ResultadoTriagemPressaoResponse(
                 nivelRisco = risco,
                 agendamentoLiberado = false,
@@ -64,6 +78,11 @@ class TriagemHipertensivaService(
             NivelRisco.CRITICO
         } else {
             NivelRisco.NORMAL
+        }
+
+    fun listarHistorico(gestanteId: UUID): List<RegistroPressaoResponse> =
+        repository.findByGestanteIdOrderByRegistradoEmDesc(gestanteId).map {
+            RegistroPressaoResponse(it.id!!, it.sistolica, it.diastolica, it.nivelRisco, it.registradoEm)
         }
 
     /**

@@ -2,8 +2,13 @@ package br.edu.ufmt.mothercare.clinical.service
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
+import br.edu.ufmt.mothercare.clinical.entity.Gestante
+import br.edu.ufmt.mothercare.clinical.entity.Trimestre
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 import java.time.LocalDate
+import java.util.UUID
 
 /**
  * RN01 / UC02 - Cálculo de IG e DPP (Regra de Naegele).
@@ -47,6 +52,33 @@ class CalculadoraGestacionalServiceTest {
         val dpp = calculadora.calcularDataProvavelParto(dum)
 
         assertEquals(LocalDate.of(2026, 8, 22), dpp)
+    }
+
+    @ParameterizedTest
+    @CsvSource(
+        "0, PRIMEIRO", "13, PRIMEIRO",
+        "14, SEGUNDO", "27, SEGUNDO",
+        "28, TERCEIRO", "41, TERCEIRO"
+    )
+    fun `deve classificar o trimestre nos limites do documento de regras`(semanas: Int, esperado: Trimestre) {
+        assertEquals(esperado, Trimestre.apartirDaSemana(semanas))
+    }
+
+    @Test
+    fun `deve gerar resposta completa com DPP, trimestre e IMC inicial`() {
+        val dum = LocalDate.of(2025, 11, 15)
+        val gestante = Gestante(
+            id = UUID.randomUUID(), usuarioId = UUID.randomUUID(), dataUltimaMenstruacao = dum,
+            pesoInicialKg = 64.0, alturaMetros = 1.60
+        )
+
+        val resposta = calculadora.gerarResposta(gestante, dataReferencia = LocalDate.of(2026, 3, 1))
+
+        assertEquals(LocalDate.of(2026, 8, 22), resposta.dataProvavelParto)
+        assertEquals(15L, resposta.semanas) // 106 dias = 15 semanas e 1 dia
+        assertEquals(1L, resposta.dias)
+        assertEquals(Trimestre.SEGUNDO, resposta.trimestre)
+        assertEquals(25.0, resposta.imcInicial, 0.001) // 64 / 1,6²
     }
 
     @Test

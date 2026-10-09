@@ -1,5 +1,5 @@
 server:
-  port: ${SERVER_PORT}
+  port: ${SERVER_PORT:8080}
 
 spring:
   application:
@@ -21,8 +21,8 @@ mothercare:
   jwt:
     secret: ${MOTHERCARE_JWT_SECRET}
   routes:
-    auth-service: ${MOTHERCARE_ROUTE_AUTH:http}
-    clinical-service: ${MOTHERCARE_ROUTE_CLINICAL}
-    scheduling-service: ${MOTHERCARE_ROUTE_SCHEDULING}
+    auth-service: ${MOTHERCARE_ROUTE_AUTH:http://localhost:8081}
+    clinical-service: ${MOTHERCARE_ROUTE_CLINICAL:http://localhost:8082}
+    scheduling-service: ${MOTHERCARE_ROUTE_SCHEDULING:http://localhost:8083}
 # Fora do Docker, os defaults apontam para localhost. No Compose, o .env
 # preenche MOTHERCARE_ROUTE_* com os hostnames da rede interna.

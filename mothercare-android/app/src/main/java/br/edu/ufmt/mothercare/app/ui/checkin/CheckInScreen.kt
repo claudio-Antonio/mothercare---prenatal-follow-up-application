@@ -1,19 +1,27 @@
 package br.edu.ufmt.mothercare.app.ui.checkin
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import br.edu.ufmt.mothercare.app.data.remote.dto.ResultadoTriagemPressaoResponse
+import br.edu.ufmt.mothercare.app.data.remote.dto.RegistroPressaoResponse
 import br.edu.ufmt.mothercare.app.data.repository.CheckInRepository
+import br.edu.ufmt.mothercare.app.ui.components.formatarDataHoraApi
+import br.edu.ufmt.mothercare.app.ui.components.rotuloRisco
 import br.edu.ufmt.mothercare.app.ui.components.ErrorBanner
 import br.edu.ufmt.mothercare.app.ui.components.GenericViewModelFactory
 import br.edu.ufmt.mothercare.app.ui.components.PrimaryButton
@@ -28,11 +36,13 @@ fun CheckInScreen(gestanteId: String, checkInRepository: CheckInRepository) {
         factory = GenericViewModelFactory { CheckInViewModel(gestanteId, checkInRepository) }
     )
     val estado by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
     CheckInScreenContent(
         estado = estado,
         onSistolicaChange = viewModel::onSistolicaChange,
         onDiastolicaChange = viewModel::onDiastolicaChange,
-        onRegistrarClick = viewModel::registrar
+        onRegistrarClick = viewModel::registrar,
+        onLigarSamu = { context.startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:192"))) }
     )
 }
 
@@ -41,9 +51,10 @@ fun CheckInScreenContent(
     estado: CheckInUiState,
     onSistolicaChange: (String) -> Unit,
     onDiastolicaChange: (String) -> Unit,
-    onRegistrarClick: () -> Unit
+    onRegistrarClick: () -> Unit,
+    onLigarSamu: () -> Unit = {}
 ) {
-    Column(modifier = Modifier.fillMaxSize().padding(20.dp)) {
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp)) {
         Text("Check-in de pressão arterial", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = BluePrimary)
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -79,10 +90,43 @@ fun CheckInScreenContent(
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(resultado.mensagem, style = MaterialTheme.typography.bodyMedium)
+                    if (!resultado.agendamentoLiberado) {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            "O agendamento de consultas fica bloqueado até um novo check-in com pressão normal.",
+                            style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Button(onClick = onLigarSamu, colors = ButtonDefaults.buttonColors(containerColor = ErrorRed)) {
+                            Text("Ligar para o SAMU (192)")
+                        }
+                    }
                 }
             }
         }
+
+        if (estado.historico.isNotEmpty()) {
+            Spacer(modifier = Modifier.height(24.dp))
+            Text("Histórico", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+            Spacer(modifier = Modifier.height(4.dp))
+            estado.historico.take(10).forEach { registro -> LinhaPressao(registro) }
+        }
     }
+}
+
+/** Também usada no detalhe da gestante do painel do médico. */
+@Composable
+internal fun LinhaPressao(registro: RegistroPressaoResponse) {
+    val critico = registro.nivelRisco == "CRITICO"
+    Row(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+        Text(formatarDataHoraApi(registro.registradoEm), style = MaterialTheme.typography.bodyMedium)
+        Text(
+            "${registro.sistolica}/${registro.diastolica} mmHg · ${rotuloRisco(registro.nivelRisco)}",
+            style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold,
+            color = if (critico) ErrorRed else SuccessGreen
+        )
+    }
+    HorizontalDivider()
 }
 
 @Preview(showBackground = true, name = "CheckIn - vazio")

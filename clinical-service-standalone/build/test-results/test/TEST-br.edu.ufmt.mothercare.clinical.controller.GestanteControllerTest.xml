@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-09T01:52:20.692Z" hostname="claudio-nery" time="0.638">
+  <properties/>
+  <testcase name="deve responder 409 ao cadastrar novamente o mesmo usuario()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.051"/>
+  <testcase name="data em formato errado deve voltar 400 com mensagem()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.031"/>
+  <testcase name="medico deve ver as proprias gestantes usando o id do token()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.024"/>
+  <testcase name="headers X-Auth forjados sem token nao dao acesso ao painel do medico()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.006"/>
+  <testcase name="gestante nao pode acessar o painel do medico()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.007"/>
+  <testcase name="nao pode criar cadastro clinico para outro usuario()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.008"/>
+  <testcase name="gestante nao pode ler a idade gestacional de outra gestante()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.008"/>
+  <testcase name="medico vinculado pode ler a idade gestacional da gestante()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.029"/>
+  <testcase name="requisicao sem token deve ser recusada()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.004"/>
+  <testcase name="me deve responder 404 quando a gestante ainda nao tem cadastro clinico()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.01"/>
+  <testcase name="gestante nao pode usar o endpoint de vinculo()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.007"/>
+  <testcase name="medico nao usa as rotas me da gestante()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.017"/>
+  <testcase name="medico vincula gestante pelo codigo de acompanhamento()" classname="br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest" time="0.017"/>
+  <system-out><![CDATA[2026-10-08T22:52:20.694-03:00  INFO 17197 --- [clinical-service] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest]: GestanteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-08T22:52:20.705-03:00  INFO 17197 --- [clinical-service] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration br.edu.ufmt.mothercare.clinical.ClinicalServiceApplication for test class br.edu.ufmt.mothercare.clinical.controller.GestanteControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-10-08T22:52:20.737-03:00  INFO 17197 --- [clinical-service] [    Test worker] b.e.u.m.c.c.GestanteControllerTest       : Starting GestanteControllerTest using Java 21.0.12.1 with PID 17197 (started by claudio in /home/claudio/Desktop/app/clinical-service-standalone)
+2026-10-08T22:52:20.738-03:00  INFO 17197 --- [clinical-service] [    Test worker] b.e.u.m.c.c.GestanteControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-10-08T22:52:21.001-03:00  WARN 17197 --- [clinical-service] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 931b9c5f-ceeb-4f5a-abd2-f5dab4d98fc0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-08T22:52:21.002-03:00  INFO 17197 --- [clinical-service] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-08T22:52:21.086-03:00  INFO 17197 --- [clinical-service] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-08T22:52:21.087-03:00  INFO 17197 --- [clinical-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-08T22:52:21.087-03:00  INFO 17197 --- [clinical-service] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-08T22:52:21.093-03:00  INFO 17197 --- [clinical-service] [    Test worker] b.e.u.m.c.c.GestanteControllerTest       : Started GestanteControllerTest in 0.384 seconds (process running for 35.216)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

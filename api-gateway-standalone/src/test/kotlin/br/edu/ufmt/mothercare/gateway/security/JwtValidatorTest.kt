@@ -4,25 +4,27 @@ import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.security.Keys
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import java.nio.charset.StandardCharsets
 import java.time.Instant
 import java.util.Date
 
-/**
- * Valida a lógica criptográfica pura do Gateway — sem mocks, gerando
- * tokens reais com o jjwt, do mesmo jeito que o auth-service faz.
- */
 class JwtValidatorTest {
 
     private val segredo = "segredo-de-teste-com-pelo-menos-32-bytes-de-tamanho"
     private val validator = JwtValidator(segredo)
     private val chaveAssinatura = Keys.hmacShaKeyFor(segredo.toByteArray(StandardCharsets.UTF_8))
 
-    private fun gerarToken(subject: String = "usuario-123", expiraEm: Instant = Instant.now().plusSeconds(3600)): String =
+    private fun gerarToken(
+        subject: String = "usuario-123",
+        expiraEm: Instant = Instant.now().plusSeconds(3600),
+        claims: Map<String, Any> = emptyMap()
+    ): String =
         Jwts.builder()
             .subject(subject)
+            .claims(claims)
             .issuedAt(Date.from(Instant.now()))
             .expiration(Date.from(expiraEm))
             .signWith(chaveAssinatura)
@@ -38,6 +40,18 @@ class JwtValidatorTest {
     fun `deve extrair o subject do token valido`() {
         val token = gerarToken(subject = "usuario-abc")
         assertEquals("usuario-abc", validator.extractSubject(token))
+    }
+
+    @Test
+    fun `deve extrair a claim papel do token`() {
+        val token = gerarToken(claims = mapOf("papel" to "MEDICO"))
+        assertEquals("MEDICO", validator.extractRole(token))
+    }
+
+    @Test
+    fun `extractRole deve retornar null quando o token nao tem a claim papel`() {
+        val token = gerarToken()
+        assertNull(validator.extractRole(token))
     }
 
     @Test

@@ -31,7 +31,7 @@ class ExameLaboratorial(
 
     /** Referência ao laudo digitalizado, se o app enviou o arquivo junto com o valor numérico. */
     @Column
-    val documentoId: UUID? = null,
+    var documentoId: UUID? = null,
 
     @Column(nullable = false)
     val registradoEm: Instant = Instant.now()

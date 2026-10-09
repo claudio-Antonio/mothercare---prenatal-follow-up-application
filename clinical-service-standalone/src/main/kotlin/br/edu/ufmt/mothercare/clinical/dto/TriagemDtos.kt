@@ -40,3 +40,12 @@ data class UltimoStatusPressaoResponse(
     val nivelRisco: NivelRisco,
     val registradoEm: java.time.Instant?
 )
+
+/** Histórico de check-ins de PA (GET /checkin/pressao/{gestanteId}), do mais recente ao mais antigo. */
+data class RegistroPressaoResponse(
+    val id: UUID,
+    val sistolica: Int,
+    val diastolica: Int,
+    val nivelRisco: NivelRisco,
+    val registradoEm: java.time.Instant
+)

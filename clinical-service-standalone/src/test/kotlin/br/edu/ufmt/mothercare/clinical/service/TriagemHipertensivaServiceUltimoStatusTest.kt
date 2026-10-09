@@ -13,7 +13,7 @@ import java.util.UUID
 class TriagemHipertensivaServiceUltimoStatusTest {
 
     private val repository = mockk<RegistroPressaoArterialRepository>()
-    private val service = TriagemHipertensivaService(repository)
+    private val service = TriagemHipertensivaService(repository, mockk(relaxed = true), mockk(relaxed = true))
     private val gestanteId = UUID.randomUUID()
 
     @Test
