@@ -15,6 +15,10 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets {
+        androidMain {
+            kotlin.srcDir("src/main/kotlin")
+        }
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -58,6 +62,11 @@ kotlin {
 android {
     namespace = "br.edu.ufmt.mothercare.app"
     compileSdk = 36
+
+    sourceSets.named("main") {
+        manifest.srcFile("src/main/AndroidManifest.xml")
+        res.setSrcDirs(listOf("src/main/res"))
+    }
 
     defaultConfig {
         applicationId = "br.edu.ufmt.mothercare.app"

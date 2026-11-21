@@ -9,199 +9,200 @@
 9        android:targetSdkVersion="35" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:5:5-67
-11-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:5:22-64
+11-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:5:5-67
+11-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:6:5-80
-12-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:6:22-77
+12-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:6:5-80
+12-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:6:22-77
 13
 14    <permission
-14-->[androidx.core:core:1.15.0] /home/claudio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
+14-->[androidx.core:core:1.15.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:22:5-24:47
 15        android:name="br.edu.ufmt.mothercare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-15-->[androidx.core:core:1.15.0] /home/claudio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
+15-->[androidx.core:core:1.15.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:23:9-81
 16        android:protectionLevel="signature" />
-16-->[androidx.core:core:1.15.0] /home/claudio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
+16-->[androidx.core:core:1.15.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:24:9-44
 17
 18    <uses-permission android:name="br.edu.ufmt.mothercare.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-18-->[androidx.core:core:1.15.0] /home/claudio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
-18-->[androidx.core:core:1.15.0] /home/claudio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
+18-->[androidx.core:core:1.15.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.15.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
 19
 20    <application
-20-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:8:5-37:19
+20-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:8:5-37:19
 21        android:name="br.edu.ufmt.mothercare.app.MotherCareApplication"
-21-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:9:9-46
+21-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:9:9-46
 22        android:allowBackup="true"
-22-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:10:9-35
+22-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:10:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.15.0] /home/claudio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
+23-->[androidx.core:core:1.15.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c3bcf6fafce41317bd221bcb4f3f43fd/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 24        android:debuggable="true"
 25        android:extractNativeLibs="false"
 26        android:icon="@mipmap/ic_launcher"
-26-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:11:9-43
+26-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:11:9-43
 27        android:label="@string/app_name"
-27-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:12:9-41
+27-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:12:9-41
 28        android:networkSecurityConfig="@xml/network_security_config"
-28-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:14:9-69
-29        android:theme="@style/Theme.MotherCare" >
-29-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:13:9-48
-30        <activity
-30-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:17:9-25:20
-31            android:name="br.edu.ufmt.mothercare.app.MainActivity"
-31-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:18:13-41
-32            android:exported="true"
-32-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:19:13-36
-33            android:theme="@style/Theme.MotherCare" >
-33-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:20:13-52
-34            <intent-filter>
-34-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:21:13-24:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:22:17-69
-35-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:22:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:23:17-77
-37-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:23:27-74
-38            </intent-filter>
-39        </activity>
-40
-41        <!-- Abre laudos baixados do prontuário em visualizador externo (PDF/imagem). -->
-42        <provider
-43            android:name="androidx.core.content.FileProvider"
-43-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:29:13-62
-44            android:authorities="br.edu.ufmt.mothercare.app.fileprovider"
-44-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:30:13-64
-45            android:exported="false"
-45-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:31:13-37
-46            android:grantUriPermissions="true" >
-46-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:32:13-47
-47            <meta-data
-47-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:33:13-35:54
-48                android:name="android.support.FILE_PROVIDER_PATHS"
-48-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:34:17-67
-49                android:resource="@xml/file_paths" />
-49-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:35:17-51
-50        </provider>
-51        <provider
-51-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:8:9-13:20
-52            android:name="org.jetbrains.compose.resources.AndroidContextProvider"
-52-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:9:13-82
-53            android:authorities="br.edu.ufmt.mothercare.app.resources.AndroidContextProvider"
-53-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:10:13-84
-54            android:enabled="true"
-54-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:11:13-35
-55            android:exported="false" >
-55-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:12:13-37
-56        </provider>
-57        <provider
-57-->[androidx.emoji2:emoji2:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
-58            android:name="androidx.startup.InitializationProvider"
-58-->[androidx.emoji2:emoji2:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
-59            android:authorities="br.edu.ufmt.mothercare.app.androidx-startup"
-59-->[androidx.emoji2:emoji2:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
-60            android:exported="false" >
-60-->[androidx.emoji2:emoji2:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
-61            <meta-data
-61-->[androidx.emoji2:emoji2:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
-62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-62-->[androidx.emoji2:emoji2:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
-63                android:value="androidx.startup" />
-63-->[androidx.emoji2:emoji2:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
-64            <meta-data
-64-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/claudio/.gradle/caches/8.14/transforms/4dce5e05277f23ce7bba700326140963/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:29:13-31:52
-65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-65-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/claudio/.gradle/caches/8.14/transforms/4dce5e05277f23ce7bba700326140963/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:30:17-78
-66                android:value="androidx.startup" />
-66-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/claudio/.gradle/caches/8.14/transforms/4dce5e05277f23ce7bba700326140963/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:31:17-49
-67            <meta-data
-67-->[io.github.vinceglb:filekit-core-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/7be4a3ae173a51177fe11b6c39704651/transformed/filekit-core-release/AndroidManifest.xml:14:13-16:52
-68                android:name="io.github.vinceglb.filekit.initializer.FileKitInitializer"
-68-->[io.github.vinceglb:filekit-core-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/7be4a3ae173a51177fe11b6c39704651/transformed/filekit-core-release/AndroidManifest.xml:15:17-89
-69                android:value="androidx.startup" />
-69-->[io.github.vinceglb:filekit-core-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/7be4a3ae173a51177fe11b6c39704651/transformed/filekit-core-release/AndroidManifest.xml:16:17-49
-70            <meta-data
-70-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-71                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-71-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
-72                android:value="androidx.startup" />
-72-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-73        </provider>
-74        <provider
-74-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:9:9-17:20
-75            android:name="io.github.vinceglb.filekit.dialogs.FileKitFileProvider"
-75-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:10:13-82
-76            android:authorities="br.edu.ufmt.mothercare.app.filekit.fileprovider"
-76-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:11:13-72
-77            android:exported="false"
-77-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:12:13-37
-78            android:grantUriPermissions="true" >
-78-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:13:13-47
-79            <meta-data
-79-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:33:13-35:54
-80                android:name="android.support.FILE_PROVIDER_PATHS"
-80-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:34:17-67
-81                android:resource="@xml/filekit_file_paths" />
-81-->/home/claudio/Desktop/app/mothercare-android/composeApp/src/androidMain/AndroidManifest.xml:35:17-51
-82        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
-83        <service
-83-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:20:9-32:19
-84            android:name="com.google.android.gms.metadata.ModuleDependencies"
-84-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:21:13-78
-85            android:enabled="false"
-85-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:22:13-36
-86            android:exported="false" >
-86-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:23:13-37
-87            <intent-filter>
-87-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:25:13-27:29
-88                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
-88-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:26:17-94
-88-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:26:25-91
-89            </intent-filter>
-90
-91            <meta-data
-91-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:29:13-31:36
-92                android:name="photopicker_activity:0:required"
-92-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:30:17-63
-93                android:value="" />
-93-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:31:17-33
-94        </service>
-95
-96        <receiver
-96-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-97            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-97-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-98            android:directBootAware="false"
-98-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-99            android:enabled="true"
-99-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-100            android:exported="true"
-100-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-101            android:permission="android.permission.DUMP" >
-101-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
-102            <intent-filter>
-102-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-103                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-103-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-103-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
-104            </intent-filter>
-105            <intent-filter>
-105-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-106                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-106-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-106-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
-107            </intent-filter>
-108            <intent-filter>
-108-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-109                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
-110            </intent-filter>
-111            <intent-filter>
-111-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-112                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-112-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-112-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
-113            </intent-filter>
-114        </receiver>
-115    </application>
-116
-117</manifest>
+28-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:14:9-69
+29        android:testOnly="true"
+30        android:theme="@style/Theme.MotherCare" >
+30-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:13:9-48
+31        <activity
+31-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:17:9-25:20
+32            android:name="br.edu.ufmt.mothercare.app.MainActivity"
+32-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:18:13-41
+33            android:exported="true"
+33-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:19:13-36
+34            android:theme="@style/Theme.MotherCare" >
+34-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:20:13-52
+35            <intent-filter>
+35-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:21:13-24:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:22:17-69
+36-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:22:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:23:17-77
+38-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:23:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <!-- Abre laudos baixados do prontuário em visualizador externo (PDF/imagem). -->
+43        <provider
+44            android:name="androidx.core.content.FileProvider"
+44-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:29:13-62
+45            android:authorities="br.edu.ufmt.mothercare.app.fileprovider"
+45-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:30:13-64
+46            android:exported="false"
+46-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:31:13-37
+47            android:grantUriPermissions="true" >
+47-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:32:13-47
+48            <meta-data
+48-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:33:13-35:54
+49                android:name="android.support.FILE_PROVIDER_PATHS"
+49-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:34:17-67
+50                android:resource="@xml/file_paths" />
+50-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:35:17-51
+51        </provider>
+52        <provider
+52-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio_antonio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:8:9-13:20
+53            android:name="org.jetbrains.compose.resources.AndroidContextProvider"
+53-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio_antonio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:9:13-82
+54            android:authorities="br.edu.ufmt.mothercare.app.resources.AndroidContextProvider"
+54-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio_antonio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:10:13-84
+55            android:enabled="true"
+55-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio_antonio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:11:13-35
+56            android:exported="false" >
+56-->[org.jetbrains.compose.components:components-resources-android:1.9.3] /home/claudio_antonio/.gradle/caches/8.14/transforms/23331798d2fa7e25bfc0606dd0f96023/transformed/library-release/AndroidManifest.xml:12:13-37
+57        </provider>
+58        <provider
+58-->[androidx.emoji2:emoji2:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+60            android:authorities="br.edu.ufmt.mothercare.app.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/aebcefe01876c71b6271065d2c5ce7ce/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/claudio_antonio/.gradle/caches/8.14/transforms/4dce5e05277f23ce7bba700326140963/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:29:13-31:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/claudio_antonio/.gradle/caches/8.14/transforms/4dce5e05277f23ce7bba700326140963/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:30:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.9.4] /home/claudio_antonio/.gradle/caches/8.14/transforms/4dce5e05277f23ce7bba700326140963/transformed/lifecycle-process-2.9.4/AndroidManifest.xml:31:17-49
+68            <meta-data
+68-->[io.github.vinceglb:filekit-core-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/7be4a3ae173a51177fe11b6c39704651/transformed/filekit-core-release/AndroidManifest.xml:14:13-16:52
+69                android:name="io.github.vinceglb.filekit.initializer.FileKitInitializer"
+69-->[io.github.vinceglb:filekit-core-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/7be4a3ae173a51177fe11b6c39704651/transformed/filekit-core-release/AndroidManifest.xml:15:17-89
+70                android:value="androidx.startup" />
+70-->[io.github.vinceglb:filekit-core-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/7be4a3ae173a51177fe11b6c39704651/transformed/filekit-core-release/AndroidManifest.xml:16:17-49
+71            <meta-data
+71-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+72                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+72-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+73                android:value="androidx.startup" />
+73-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+74        </provider>
+75        <provider
+75-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:9:9-17:20
+76            android:name="io.github.vinceglb.filekit.dialogs.FileKitFileProvider"
+76-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:10:13-82
+77            android:authorities="br.edu.ufmt.mothercare.app.filekit.fileprovider"
+77-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:11:13-72
+78            android:exported="false"
+78-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:12:13-37
+79            android:grantUriPermissions="true" >
+79-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:13:13-47
+80            <meta-data
+80-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:33:13-35:54
+81                android:name="android.support.FILE_PROVIDER_PATHS"
+81-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:34:17-67
+82                android:resource="@xml/filekit_file_paths" />
+82-->/home/claudio_antonio/Área de trabalho/app_mothercare/mothercare---prenatal-follow-up-application/mothercare-android/composeApp/src/main/AndroidManifest.xml:35:17-51
+83        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+84        <service
+84-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:20:9-32:19
+85            android:name="com.google.android.gms.metadata.ModuleDependencies"
+85-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:21:13-78
+86            android:enabled="false"
+86-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:22:13-36
+87            android:exported="false" >
+87-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:23:13-37
+88            <intent-filter>
+88-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:25:13-27:29
+89                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+89-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:26:17-94
+89-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:26:25-91
+90            </intent-filter>
+91
+92            <meta-data
+92-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:29:13-31:36
+93                android:name="photopicker_activity:0:required"
+93-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:30:17-63
+94                android:value="" />
+94-->[io.github.vinceglb:filekit-dialogs-android:0.12.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/3ffe34f50f7be3dd21c289439e9b187f/transformed/filekit-dialogs-release/AndroidManifest.xml:31:17-33
+95        </service>
+96
+97        <receiver
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+98            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+99            android:directBootAware="false"
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+100            android:enabled="true"
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+101            android:exported="true"
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+102            android:permission="android.permission.DUMP" >
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+104                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+107                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+108            </intent-filter>
+109            <intent-filter>
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+110                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+111            </intent-filter>
+112            <intent-filter>
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+113                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/claudio_antonio/.gradle/caches/8.14/transforms/c499623fc1170952d06ac47ece400eb2/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+114            </intent-filter>
+115        </receiver>
+116    </application>
+117
+118</manifest>

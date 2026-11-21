@@ -7,7 +7,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 
 @Composable
-actual fun rememberAbrirDiscador(): (numero: String) -> Unit {
+fun rememberAbrirDiscador(): (numero: String) -> Unit {
     val context = LocalContext.current
     return remember(context) {
         { numero -> context.startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:$numero"))) }
